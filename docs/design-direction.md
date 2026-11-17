@@ -54,7 +54,7 @@ No copio los textos, la marca, las fotos, la composición exacta ni sus tipograf
    - MONTGÓ (salvia): Blat de la Marina;
    - HERMANOS (cacao): foto real en blanco y negro, los logros y una reseña;
    - ENCARGOS (azul): el formulario de WhatsApp.
-5. **Dos obradores (crema):** horario, los dos locales, Too Good To Go y el mapa.
+5. **Dos obradores (crema):** dos tarjetas gemelas con el mismo peso, una por obrador, unidas por un «&» manuscrito. Cada una lleva foto en arco, número, estado abierto/cerrado en directo, dirección, horario (con la fila de hoy resaltada), su teléfono, el botón de cómo llegar y su propio mapa. Debajo, una franja con Too Good To Go, Glovo y WhatsApp.
 6. **Pie (noche).**
 
 ## Movimiento
