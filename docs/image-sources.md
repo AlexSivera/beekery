@@ -85,3 +85,12 @@ Datos de Instagram:
 - El pin, «¡Aquí!» y las etiquetas (Col·legi Llebeig, Hiper Dénia, Hospital San Carlos, Lidl, Cementeri, avenidas) son HTML encima del SVG. Sus posiciones salen del propio script.
 - Las coordenadas de los obradores son las de sus fichas de Google Maps.
 - Sustituyen a los iframes de Google Maps, así que la web ya no carga cookies de Google en esta sección. El botón «Cómo llegar» sigue abriendo Google Maps.
+
+## v3, revisión 6: portada y espigas (18/11/2026)
+| Archivo | Sección | Origen | Real / provisional |
+|---|---|---|---|
+| `assets/v3/pan-tabla.webp` | Hero | Recorte con fondo transparente facilitado por el cliente (pan.webp) | **Provisional**: no consta que sea pan de Beekery. Sustituir por una cenital de una hogaza de Beekery sobre tabla y paño, recortada con fondo transparente, a 2000 px o más |
+| `assets/v3/trigo.webp` | Espigas decorativas (vitrina y «Dos obradores») | Ilustración facilitada por el cliente (trigo.webp) | Recurso gráfico; confirmar la licencia si viene de un banco de imágenes |
+| `assets/v3/card-pan.webp` | Tarjeta «Pan» | Instagram @obradorbeekery (hogazas con dibujo de harina) | Real |
+
+El pin y «¡Aquí!» de cada mapa enlazan a la ficha de Google Maps de su obrador.

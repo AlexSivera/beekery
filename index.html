@@ -20,8 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Mrs+Saint+Delafield&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=v3-5" />
-  <link rel="preload" as="image" href="assets/v3/hogaza-disc.webp" />
+  <link rel="stylesheet" href="styles.css?v=v3-7" />
+  <link rel="preload" as="image" href="assets/v3/pan-tabla.webp" />
 
   <script type="application/ld+json">
   {
@@ -79,18 +79,6 @@
     <symbol id="hoja" viewBox="0 0 48 22">
       <path d="M24 20C14 20 5 13 3 3c10 0 19 7 21 17Z M24 20c10 0 19-7 21-17-10 0-19 7-21 17Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
     </symbol>
-    <symbol id="espiga" viewBox="0 0 120 420">
-      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M60 418C61 380 58 330 60 272"/>
-        <path d="M60 80C49 60 51 32 60 8C69 32 71 60 60 80Z"/>
-        <path d="M60 110C38 104 28 76 34 48C54 58 62 82 60 110Z"/><path d="M60 110C82 104 92 76 86 48C66 58 58 82 60 110Z"/>
-        <path d="M60 150C38 144 28 116 34 88C54 98 62 122 60 150Z"/><path d="M60 150C82 144 92 116 86 88C66 98 58 122 60 150Z"/>
-        <path d="M60 190C38 184 28 156 34 128C54 138 62 162 60 190Z"/><path d="M60 190C82 184 92 156 86 128C66 138 58 162 60 190Z"/>
-        <path d="M60 230C38 224 28 196 34 168C54 178 62 202 60 230Z"/><path d="M60 230C82 224 92 196 86 168C66 178 58 202 60 230Z"/>
-        <path d="M60 272C40 266 31 242 36 216C54 224 62 248 60 272Z"/><path d="M60 272C80 266 89 242 84 216C66 224 58 248 60 272Z"/>
-        <path d="M34 48L22 12M86 48L98 12M34 88L17 54M86 88L103 54M34 128L14 96M86 128L106 96"/>
-      </g>
-    </symbol>
   </svg>
 
   <a class="skip" href="#main">Saltar al contenido</a>
@@ -146,12 +134,13 @@
         </div>
       </div>
 
-      <div class="hero-loaf" data-hero-loaf>
-        <div class="hero-blur" aria-hidden="true"></div>
-        <img class="hero-disc" src="assets/v3/hogaza-disc.webp" alt="Hogaza de masa madre de Beekery vista desde arriba, enharinada y abierta en cuatro cortes" width="760" height="760" fetchpriority="high" />
-        <svg class="ring ring-hero" viewBox="0 0 200 200" aria-hidden="true">
-          <defs><path id="ring-a" d="M100,100 m-90,0 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0" /></defs>
-          <text><textPath href="#ring-a" textLength="560" lengthAdjust="spacing">Masa madre · Trigo de la Marina Alta · Dénia · Desde 2019 · </textPath></text>
+      <div class="hero-visual" data-hero-media>
+        <img class="hero-bread" src="assets/v3/pan-tabla.webp" alt="Hogaza de masa madre sobre una tabla de madera, envuelta en un paño de lino" width="1024" height="854" fetchpriority="high" />
+        <svg class="ring hero-seal" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="99" class="seal-bg" />
+          <defs><path id="ring-a" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" /></defs>
+          <text><textPath href="#ring-a" textLength="458" lengthAdjust="spacing">Masa madre · Marina Alta · Desde 2019 · </textPath></text>
+          <use href="#hoja" x="70" y="86" width="60" height="28" class="seal-leaf" />
         </svg>
       </div>
 
@@ -197,8 +186,8 @@
 
     <!-- ================= VITRINA ================= -->
     <section class="vitrina" id="vitrina" aria-labelledby="vitrina-title">
-      <svg class="espiga espiga-a" aria-hidden="true"><use href="#espiga" width="100%" height="100%" /></svg>
-      <svg class="espiga espiga-b" aria-hidden="true"><use href="#espiga" width="100%" height="100%" /></svg>
+      <img class="espiga espiga-a" src="assets/v3/trigo.webp" alt="" width="500" height="720" loading="lazy" />
+      <img class="espiga espiga-b" src="assets/v3/trigo.webp" alt="" width="500" height="720" loading="lazy" />
 
       <div class="vitrina-head">
         <h2 class="duo" id="vitrina-title"><span class="script">nuestra</span><span class="caps">vitrina</span></h2>
@@ -207,7 +196,7 @@
 
       <div class="shelf">
         <a class="card card-arch" href="#carta" data-open="pan">
-          <img src="assets/v3/card-pan.webp" alt="Hogazas de Beekery recién horneadas, enfriándose sobre la rejilla" width="780" height="1067" loading="lazy" />
+          <img src="assets/v3/card-pan.webp" alt="Hogazas de Beekery con su dibujo de harina sobre la corteza" width="780" height="1064" loading="lazy" />
           <span class="card-name">Pan</span><span class="card-meta">15 variedades</span>
         </a>
         <a class="card card-b" href="#carta" data-open="semi">
@@ -436,7 +425,7 @@
 
     <!-- ================= VISITA · DOS OBRADORES ================= -->
     <section class="visita" id="visita" aria-labelledby="visita-title">
-      <svg class="espiga espiga-c" aria-hidden="true"><use href="#espiga" width="100%" height="100%" /></svg>
+      <img class="espiga espiga-c" src="assets/v3/trigo.webp" alt="" width="500" height="720" loading="lazy" />
       <h2 class="duo" id="visita-title"><span class="script">dos</span><span class="caps">obradores</span></h2>
       <p class="visita-intro">Los dos en Dénia, a un paseo el uno del otro. Mira cuál está abierto y ven a por tu pan.</p>
 
@@ -471,7 +460,7 @@
             <span class="map-chip" style="left:54.6%;top:84.7%">Col·legi Llebeig</span>
             <span class="map-chip is-left" style="left:39.7%;top:84.2%">Hiper Dénia</span>
             <span class="map-other" style="left:9.1%;top:91.3%">02</span>
-            <span class="map-pin" style="left:60.2%;top:39.7%"><span class="map-here is-right">¡Aquí!<small>Beekery · Av. de Gandia</small></span></span>
+            <a class="map-pin" style="left:60.2%;top:39.7%" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener" aria-label="Abrir el obrador de la Avenida de Gandia en Google Maps"><span class="map-here is-right">¡Aquí!<small>Beekery · Av. de Gandia</small></span></a>
             <a class="map-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>
           </div>
         </article>
@@ -508,7 +497,7 @@
             <span class="map-chip" style="left:45.5%;top:37.5%">Lidl</span>
             <span class="map-chip" style="left:56.7%;top:86%">Cementeri</span>
             <span class="map-other" style="left:90.9%;top:8.7%">01</span>
-            <span class="map-pin" style="left:39.8%;top:60.3%"><span class="map-here">¡Aquí!<small>Beekery · Madrigueres</small></span></span>
+            <a class="map-pin" style="left:39.8%;top:60.3%" href="https://www.google.com/maps/search/?api=1&amp;query=Obrador+Beekery+Partida+Madrigueres+Sud+26+D%C3%A9nia" target="_blank" rel="noopener" aria-label="Abrir el obrador de Madrigueres en Google Maps"><span class="map-here">¡Aquí!<small>Beekery · Madrigueres</small></span></a>
             <a class="map-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>
           </div>
         </article>
@@ -554,9 +543,9 @@
     <a href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
   </nav>
 
-  <script defer src="lib/gsap.min.js?v=v3-5"></script>
-  <script defer src="lib/ScrollTrigger.min.js?v=v3-5"></script>
-  <script defer src="lib/manifest.js?v=v3-5"></script>
-  <script defer src="main.js?v=v3-5"></script>
+  <script defer src="lib/gsap.min.js?v=v3-7"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=v3-7"></script>
+  <script defer src="lib/manifest.js?v=v3-7"></script>
+  <script defer src="main.js?v=v3-7"></script>
 </body>
 </html>

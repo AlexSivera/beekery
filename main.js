@@ -282,10 +282,10 @@
     if (reduce || !window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
 
-    // La hogaza gira un poco al salir del hero
-    var loaf = $(".hero-disc");
+    // La hogaza se acerca un poco al salir del hero
+    var loaf = $(".hero-bread");
     if (loaf) {
-      gsap.to(loaf, { rotate: 24, yPercent: 8, ease: "none",
+      gsap.to(loaf, { rotate: 10, yPercent: 8, ease: "none",
         scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     }
     // Las palabras gigantes de las bandas se deslizan al cruzar la pantalla
