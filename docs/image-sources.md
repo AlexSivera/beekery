@@ -78,3 +78,10 @@ Datos de Instagram:
 - Roscón sin gluten, vegano o sin azúcar.
 - Panettone y pandoro.
 - Huevos de chocolate en Pascua.
+
+## Mapas ilustrados (v3, revisión 5)
+`assets/v3/map-gandia.svg` y `assets/v3/map-madrigueres.svg` se generan con `tools/make-maps.js` a partir de datos de **OpenStreetMap** (© colaboradores de OpenStreetMap, licencia ODbL). La atribución está visible sobre cada mapa y enlaza a openstreetmap.org/copyright.
+
+- El pin, «¡Aquí!» y las etiquetas (Col·legi Llebeig, Hiper Dénia, Hospital San Carlos, Lidl, Cementeri, avenidas) son HTML encima del SVG. Sus posiciones salen del propio script.
+- Las coordenadas de los obradores son las de sus fichas de Google Maps.
+- Sustituyen a los iframes de Google Maps, así que la web ya no carga cookies de Google en esta sección. El botón «Cómo llegar» sigue abriendo Google Maps.
