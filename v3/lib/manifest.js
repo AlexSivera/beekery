@@ -23,6 +23,12 @@
       6: [9, 14]
     },
 
+    // Horario de cada obrador (mismo formato que hours)
+    sedes: {
+      gandia: { 0: [9, 14], 1: null, 2: [8, 19], 3: [8, 19], 4: [8, 19], 5: [8, 19], 6: [9, 14] },
+      madrigueres: { 0: [9, 14], 1: null, 2: [8, 16], 3: [8, 16], 4: [8, 16], 5: [8, 16], 6: [9, 14] }
+    },
+
     // Panes que salen del horno cada día (mismo índice que hours)
     agenda: {
       2: ["Multicereales", "Blat de la Marina", "Pan inglés integral"],

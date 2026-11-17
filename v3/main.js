@@ -66,6 +66,31 @@
     if (msg) txt.textContent = msg;
   }
 
+  /* ---------- Dos obradores: estado y fila de hoy en cada uno ---------- */
+  function initSedes() {
+    if (!data.sedes) return;
+    $$("[data-sede]").forEach(function (card) {
+      var hours = data.sedes[card.getAttribute("data-sede")];
+      var st = $("[data-sede-status]", card);
+      if (!hours || !st) return;
+      var today = hours[NOW.day], open = !!(today && NOW.hour >= today[0] && NOW.hour < today[1]), msg;
+      if (open) msg = "Abierto ahora · hasta las " + fmt(today[1]);
+      else if (today && NOW.hour < today[0]) msg = "Cerrado · abre hoy a las " + fmt(today[0]);
+      else {
+        for (var i = 1; i <= 7; i++) {
+          var d = (NOW.day + i) % 7;
+          if (hours[d]) { msg = "Cerrado · abre " + (i === 1 ? "mañana" : "el " + data.dayNames[d]) + " a las " + fmt(hours[d][0]); break; }
+        }
+      }
+      card.classList.toggle("is-open", open);
+      st.classList.add(open ? "is-open" : "is-closed");
+      if (msg) $("span", st).textContent = msg;
+      $$("[data-days]", card).forEach(function (row) {
+        if ((" " + row.getAttribute("data-days") + " ").indexOf(" " + NOW.day + " ") > -1) row.classList.add("is-today");
+      });
+    });
+  }
+
   /* ---------- Hoy en el horno ---------- */
   function initHoy() {
     if (!data.agenda) return;
@@ -239,7 +264,7 @@
   function initReveals() {
     var sel = [
       ".hoy-head > *", ".hoy-board", ".vitrina-head > *", ".shelf > .card", ".carta",
-      ".band-panel > *:not(.vert)", ".visita > .duo", ".visita-intro", ".sede", ".tgtg", ".map"
+      ".band-panel > *:not(.vert)", ".visita > .duo", ".visita-intro", ".obr", ".visita-extra > *"
     ].join(",");
     var items = $$(sel);
     if (reduce || !("IntersectionObserver" in window)) return;
@@ -278,6 +303,7 @@
 
   function boot() {
     safe(initStatus, "status");
+    safe(initSedes, "sedes");
     safe(initHoy, "hoy");
     safe(initNav, "nav");
     safe(initCarta, "carta");

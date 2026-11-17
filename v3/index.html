@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Mrs+Saint+Delafield&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=v3-3" />
+  <link rel="stylesheet" href="styles.css?v=v3-4" />
   <link rel="preload" as="image" href="assets/v3/hogaza-disc.webp" />
 
   <script type="application/ld+json">
@@ -435,68 +435,84 @@
       <h2 class="band-word" id="encargos-title" data-drift>Encargos</h2>
     </section>
 
-    <!-- ================= VISITA ================= -->
+    <!-- ================= VISITA · DOS OBRADORES ================= -->
     <section class="visita" id="visita" aria-labelledby="visita-title">
       <svg class="espiga espiga-c" aria-hidden="true"><use href="#espiga" width="100%" height="100%" /></svg>
       <h2 class="duo" id="visita-title"><span class="script">dos</span><span class="caps">obradores</span></h2>
-      <p class="visita-intro">En Dénia, a pocos minutos el uno del otro.</p>
+      <p class="visita-intro">Los dos en Dénia, a un paseo el uno del otro. Mira cuál está abierto y ven a por tu pan.</p>
 
-      <div class="visita-grid">
-        <article class="sede">
-          <figure class="sede-photo"><img src="assets/v3/sede-gandia.webp" alt="Fachada azul de Beekery en la Avenida de Gandia, 25" width="540" height="640" loading="lazy" /></figure>
-          <p class="sede-n">01 · Donde siempre</p>
-          <h3>Av. de Gandia, 25</h3>
-          <table class="hours" data-hours>
-            <caption class="sr-only">Horario de apertura</caption>
+      <div class="obradores">
+        <article class="obr" data-sede="gandia" aria-labelledby="obr-gandia">
+          <figure class="obr-photo"><img src="assets/v3/sede-gandia.webp" alt="Fachada azul de Beekery en la Avenida de Gandia, 25" width="540" height="640" loading="lazy" /></figure>
+          <div class="obr-head">
+            <span class="obr-n" aria-hidden="true">01</span>
+            <div>
+              <p class="obr-kicker">El de siempre</p>
+              <h3 id="obr-gandia">Avenida de Gandia</h3>
+            </div>
+          </div>
+          <p class="obr-status" data-sede-status><i></i><span>Mar–Vie 8–19 · Sáb–Dom 9–14</span></p>
+          <p class="obr-addr">Av. de Gandia, 25 · 03700 Dénia</p>
+          <table class="obr-hours">
+            <caption class="sr-only">Horario del obrador de la Avenida de Gandia</caption>
             <tbody>
-              <tr data-row="2"><th scope="row">Martes</th><td>8:00 – 19:00</td></tr>
-              <tr data-row="3"><th scope="row">Miércoles</th><td>8:00 – 19:00</td></tr>
-              <tr data-row="4"><th scope="row">Jueves</th><td>8:00 – 19:00</td></tr>
-              <tr data-row="5"><th scope="row">Viernes</th><td>8:00 – 19:00</td></tr>
-              <tr data-row="6"><th scope="row">Sábado</th><td>9:00 – 14:00</td></tr>
-              <tr data-row="0"><th scope="row">Domingo</th><td>9:00 – 14:00</td></tr>
-              <tr data-row="1" class="is-closed"><th scope="row">Lunes</th><td>Cerrado</td></tr>
+              <tr data-days="2 3 4 5"><th scope="row">Martes a viernes</th><td>8:00 – 19:00</td></tr>
+              <tr data-days="6 0"><th scope="row">Sábado y domingo</th><td>9:00 – 14:00</td></tr>
+              <tr data-days="1" class="is-closed"><th scope="row">Lunes</th><td>Cerrado</td></tr>
             </tbody>
           </table>
-          <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar ↗</a>
-          <div class="visita-actions">
+          <div class="obr-actions">
             <a class="btn btn-tinta" href="tel:+34722348941">Llamar · 722 34 89 41</a>
-            <a class="btn btn-line" href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+          <div class="obr-map">
+            <iframe title="Mapa del obrador de la Avenida de Gandia, 25" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Beekery%20Obrador%2C%20Av.%20de%20Gandia%2025%2C%2003700%20D%C3%A9nia&amp;z=16&amp;output=embed"></iframe>
           </div>
         </article>
 
-        <article class="sede sede-new">
-          <figure class="sede-photo"><img src="assets/v3/sede-madrigueres.webp" alt="El nuevo obrador de Madrigueres de noche, con las bandejas listas en los carros" width="600" height="710" loading="lazy" /></figure>
-          <p class="sede-n">02 · Nuevo · desde el 3 de noviembre de 2026</p>
-          <h3>Ptda. Madrigueres Sud, 26 · Local 8A</h3>
-          <p class="sede-note">Detrás del San Carlos. Teléfono de este obrador: <a href="tel:+34623000643">623 00 06 43</a>.</p>
-          <table class="hours hours-short">
+        <div class="obr-amp" aria-hidden="true"><span class="script">&amp;</span></div>
+
+        <article class="obr" data-sede="madrigueres" aria-labelledby="obr-madrigueres">
+          <figure class="obr-photo"><img src="assets/v3/sede-madrigueres.webp" alt="El obrador de Madrigueres de noche, con las bandejas listas en los carros" width="600" height="710" loading="lazy" /></figure>
+          <div class="obr-head">
+            <span class="obr-n" aria-hidden="true">02</span>
+            <div>
+              <p class="obr-kicker">Detrás del San Carlos</p>
+              <h3 id="obr-madrigueres">Madrigueres</h3>
+            </div>
+          </div>
+          <p class="obr-status" data-sede-status><i></i><span>Mar–Vie 8–16 · Sáb–Dom 9–14</span></p>
+          <p class="obr-addr">Ptda. Madrigueres Sud, 26 · Local 8A · 03700 Dénia</p>
+          <table class="obr-hours">
             <caption class="sr-only">Horario del obrador de Madrigueres</caption>
             <tbody>
-              <tr><th scope="row">Martes a viernes</th><td>8:00 – 16:00</td></tr>
-              <tr><th scope="row">Sábado y domingo</th><td>9:00 – 14:00</td></tr>
-              <tr class="is-closed"><th scope="row">Lunes</th><td>Cerrado</td></tr>
+              <tr data-days="2 3 4 5"><th scope="row">Martes a viernes</th><td>8:00 – 16:00</td></tr>
+              <tr data-days="6 0"><th scope="row">Sábado y domingo</th><td>9:00 – 14:00</td></tr>
+              <tr data-days="1" class="is-closed"><th scope="row">Lunes</th><td>Cerrado</td></tr>
             </tbody>
           </table>
-          <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Partida+Madrigueres+Sud+26+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar ↗</a>
-
-          <div class="visita-actions">
+          <div class="obr-actions">
             <a class="btn btn-tinta" href="tel:+34623000643">Llamar · 623 00 06 43</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Obrador+Beekery+Partida+Madrigueres+Sud+26+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
           </div>
-          <p class="delivery"><strong>¿Mejor en casa?</strong> También nos encuentras en Glovo.</p>
+          <div class="obr-map">
+            <iframe title="Mapa del obrador de Madrigueres" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Obrador%20Beekery%2C%20Partida%20Madrigueres%20Sud%2026%2C%2003700%20D%C3%A9nia&amp;z=16&amp;output=embed"></iframe>
+          </div>
         </article>
-
-        <aside class="tgtg" aria-labelledby="tgtg-title">
-          <p class="tgtg-kicker">Aquí no se tira nada</p>
-          <h3 id="tgtg-title">Lo que sobra del día, en Too Good To Go</h3>
-          <p>Lo que no se vende se ofrece en packs a precio reducido: pastelería, sin gluten y, según la época, roscón o monas. Lo reservas en la app y lo recoges en la Avenida de Gandia.</p>
-          <a class="link link-light" href="https://www.toogoodtogo.com/es/find/denia/beekery-denia/bakedgoods/packpasteleria-763979" target="_blank" rel="noopener">Ver Beekery en Too Good To Go ↗</a>
-        </aside>
       </div>
 
-      <div class="map">
-        <iframe title="Mapa: Beekery, Av. de Gandia 25, Dénia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Beekery%20Obrador%2C%20Av.%20de%20Gandia%2025%2C%2003700%20D%C3%A9nia&amp;z=16&amp;output=embed"></iframe>
+      <div class="visita-extra">
+        <aside class="tgtg" aria-labelledby="tgtg-title">
+          <div>
+            <p class="tgtg-kicker">Aquí no se tira nada</p>
+            <h3 id="tgtg-title">Lo que sobra del día, en Too Good To Go</h3>
+          </div>
+          <p>Packs a precio reducido de pastelería, sin gluten y, según la época, roscón o monas. Lo reservas en la app y lo recoges en la Avenida de Gandia.</p>
+          <a class="link link-light" href="https://www.toogoodtogo.com/es/find/denia/beekery-denia/bakedgoods/packpasteleria-763979" target="_blank" rel="noopener">Ver en Too Good To Go ↗</a>
+        </aside>
+        <p class="delivery"><strong>¿Mejor en casa?</strong> También nos encuentras en Glovo. Y para encargos y dudas, <a href="https://wa.me/34722348941" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.</p>
       </div>
     </section>
   </main>
@@ -527,9 +543,9 @@
     <a href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
   </nav>
 
-  <script defer src="lib/gsap.min.js?v=v3-3"></script>
-  <script defer src="lib/ScrollTrigger.min.js?v=v3-3"></script>
-  <script defer src="lib/manifest.js?v=v3-3"></script>
-  <script defer src="main.js?v=v3-3"></script>
+  <script defer src="lib/gsap.min.js?v=v3-4"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=v3-4"></script>
+  <script defer src="lib/manifest.js?v=v3-4"></script>
+  <script defer src="main.js?v=v3-4"></script>
 </body>
 </html>

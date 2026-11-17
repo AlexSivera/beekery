@@ -719,3 +719,103 @@ strong { font-weight: 700; }
 .sede-new .sede-photo img { object-position: 50% 60%; }
 .sede:not(.sede-new) .sede-photo img { object-position: 50% 0%; }
 .sede .visita-actions { margin: 1.6rem 0 1rem; }
+
+/* =========================================================
+   v3-4 · DOS OBRADORES: dos tarjetas gemelas con el mismo peso
+   ========================================================= */
+.obradores {
+  position: relative;
+  display: grid; grid-template-columns: minmax(0, 1fr) clamp(3.5rem, 6vw, 6rem) minmax(0, 1fr);
+  align-items: stretch;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+.obr {
+  display: flex; flex-direction: column;
+  background: var(--papel);
+  padding: clamp(1.1rem, 2.4vw, 2rem);
+  box-shadow: 0 40px 70px -45px rgba(74, 42, 23, .5);
+}
+.obr-photo {
+  margin: 0 0 1.6rem; aspect-ratio: 16 / 10; overflow: hidden;
+  border-radius: 999px 999px 0 0;
+}
+.obr-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.obr:hover .obr-photo img { transform: scale(1.04); }
+[data-sede="gandia"] .obr-photo img { object-position: 50% 8%; }
+[data-sede="madrigueres"] .obr-photo img { object-position: 50% 62%; }
+
+.obr-head { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 1.1rem; }
+.obr-n {
+  font: 600 clamp(3.4rem, 6vw, 5.4rem)/.78 var(--f-display); font-variation-settings: "opsz" 40;
+  color: var(--caramelo);
+}
+.obr-kicker { margin: 0 0 .35rem; font: 700 .68rem/1.3 var(--f-body); letter-spacing: .22em; text-transform: uppercase; color: var(--miel); }
+.obr h3 { font: 500 clamp(1.8rem, 2.8vw, 2.5rem)/1 var(--f-display); color: var(--cafe); }
+
+.obr-status {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: .55rem;
+  margin: 0 0 1rem; padding: .5rem .95rem .5rem .8rem; border-radius: 999px;
+  background: rgba(43, 26, 16, .06);
+  font: 600 .82rem/1.2 var(--f-body); color: var(--tinta-2);
+}
+.obr-status i { width: .55rem; height: .55rem; border-radius: 50%; background: var(--caramelo); flex: none; }
+.obr-status.is-open { background: rgba(86, 105, 63, .14); color: var(--salvia); }
+.obr-status.is-open i { background: #6F9A5B; box-shadow: 0 0 0 4px rgba(111, 154, 91, .22); animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(111, 154, 91, 0); } }
+.obr-addr { color: var(--tinta-2); margin-bottom: 1.2rem; }
+
+.obr-hours { width: 100%; border-collapse: collapse; }
+.obr-hours th, .obr-hours td { padding: .75rem .6rem; border-bottom: 1px solid rgba(43, 26, 16, .13); text-align: left; font-weight: 400; }
+.obr-hours tr:first-child th, .obr-hours tr:first-child td { border-top: 1px solid rgba(43, 26, 16, .13); }
+.obr-hours td { text-align: right; font: 500 1.15rem/1.2 var(--f-display); font-variant-numeric: lining-nums tabular-nums; }
+.obr-hours tr.is-closed td { font-style: italic; color: var(--tinta-2); }
+.obr-hours tr.is-today { background: rgba(227, 188, 108, .22); }
+.obr-hours tr.is-today th { font-weight: 700; color: var(--cafe); }
+.obr-hours tr.is-today th::after { content: " · hoy"; font-weight: 400; color: var(--miel); }
+
+.obr-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0; }
+.obr-actions .btn { flex: 1 1 auto; padding-left: 1.3rem; padding-right: 1.3rem; }
+
+.obr-map { margin-top: auto; aspect-ratio: 4 / 3; overflow: hidden; background: var(--kraft); }
+.obr-map iframe { width: 100%; height: 100%; border: 0; filter: sepia(.35) saturate(.85); transition: filter .4s; }
+.obr-map:hover iframe { filter: none; }
+
+/* El «&» que une los dos obradores */
+.obr-amp { position: relative; display: flex; align-items: center; justify-content: center; }
+.obr-amp::before { content: ""; position: absolute; top: 6%; bottom: 6%; left: 50%; width: 1px; background: var(--kraft-line); }
+.obr-amp span {
+  position: relative; padding: .4rem 0;
+  font-size: clamp(3.6rem, 6vw, 5.6rem); line-height: 1; color: var(--oro);
+  background: var(--crema);
+}
+
+/* Franja de abajo: Too Good To Go, Glovo y WhatsApp */
+.visita-extra { margin-top: clamp(2.5rem, 5vw, 4rem); display: grid; gap: 1.4rem; }
+.visita-extra .tgtg { display: grid; grid-template-columns: 1.1fr 1.5fr auto; gap: 1rem 2.5rem; align-items: center; padding: 1.8rem 2.2rem; }
+.visita-extra .tgtg h3 { margin: 0; font-size: 1.45rem; }
+.visita-extra .tgtg p { margin: 0; }
+.visita-extra .tgtg .tgtg-kicker { margin-bottom: .4rem; }
+.visita-extra .delivery { margin: 0; text-align: center; }
+.visita-extra .delivery a { color: var(--cafe); }
+
+@media (max-width: 1024px) {
+  .visita-extra .tgtg { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .obradores { grid-template-columns: 1fr; }
+  .obr-amp { height: 5.5rem; }
+  .obr-amp::before { top: 50%; bottom: auto; left: 8%; right: 8%; width: auto; height: 1px; }
+  .obr-amp span { padding: 0 .9rem; font-size: 4.2rem; }
+  .obr { margin: 0 -.25rem; }
+  .obr-actions .btn { flex: 1 1 100%; }
+  .visita-extra .tgtg { padding: 1.6rem 1.4rem; }
+  .visita-extra .delivery { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { .obr-status.is-open i { animation: none; } }
+.obr-hours td { font: 600 1rem/1.2 var(--f-body); white-space: nowrap; letter-spacing: .01em; }
+.obr-hours tr.is-closed td { font-weight: 400; }
+@media (max-width: 860px) {
+  .obr h3 { font-size: 1.8rem; }
+  .obr-hours th { font-size: .95rem; }
+  .obr-hours th, .obr-hours td { padding: .7rem .45rem; }
+}
