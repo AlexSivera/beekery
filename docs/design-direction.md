@@ -1,40 +1,56 @@
-# Beekery v2 — Dirección artística
+# Beekery v2 — Dirección artística: «La madrugada del obrador»
 
-Rama: `rediseno-v2`. La v1 está intacta en `main` (etiqueta `v1-web-actual`).
+Rama: `rediseno-v2`. La v1 está en `main` (etiqueta `v1-web-actual`). El primer intento de la v2, «Bodegón gráfico», está guardado en la etiqueta `v2-bodegon-grafico`.
 
-## Concepto: «Bodegón de obrador»
+## Por qué cambió
+El primer intento usaba tipografía condensada en mayúsculas y bloques de color saturado. Sacó sus referencias de marcas de producto envasado (mermeladas, chocolate, latas) y el resultado parecía una marca de moda o de festival, no una panadería. Esta versión parte de una investigación con Playwright centrada en panaderías y cafés reales.
 
-Beekery ya tiene su mejor material: fotos de estudio de producto sobre blanco (la hogaza cenital, el semifrío amarillo, la coca, el tiramisú) y un color de marca muy reconocible, el azul del logo «B Obrador». La v2 trata cada pan y cada tarta como un objeto de bodegón: producto aislado sobre campos de color planos sacados del propio mundo de Beekery, con tipografía condensada muy grande, como la que se imprime en un saco de harina.
-
-Frente a la v1 (crema cálido, serif display, tarjetas redondeadas, hogaza en círculo), la v2 es plana, gráfica y de color: esquinas rectas, sin sombras y sin tarjetas.
-
-## Lo que la hace distinta
-- **«Hoy en el horno»** pasa de ser un detalle a ser la segunda pantalla: el día de hoy en tipografía gigante sobre amarillo, con selector de días. Es lo que más diferencia a Beekery (cada pan sale un día concreto) y lo más útil para el cliente.
-- **La vitrina**: en escritorio, un escenario fijo cambia de color y de producto mientras recorres la carta (azul para el pan, amarillo para los semifríos, teja para las cocas, mantequilla para la bollería, cacao para las tartas, verde para la temporada). En móvil cada categoría es su propio bloque de color.
+## Concepto
+Lo que no ve el cliente: la madrugada en el obrador, con harina, manos, masa madre y horno. Y lo que sí ve cada mañana: la pizarra con el pan del día, las etiquetas de papel de las baldas y la vitrina.
 
 ## Sistema
 | | |
 |---|---|
-| Tipografía display | Archivo con eje de anchura al 62 % (extracondensada), peso 800, mayúsculas |
-| Texto | Archivo con anchura normal, 400/500 |
-| Voz humana | Newsreader en cursiva, solo en frases cortas |
-| Harina (fondo) | `#F3F1EC` |
-| Tinta / corteza | `#22160F` |
-| Azul obrador | `#356F85` (el azul del logo, un punto más profundo para que el contraste pase AA) |
-| Amarillo semifrío | `#F2C21B` |
-| Teja (cocas) | `#C4512F` |
-| Cacao (tartas) | `#4A2C1E` |
-| Verde Montgó (temporada) | `#2F5D3A` |
+| Titulares | Libre Caslon Display, con mayúsculas normales. Es una serif clásica emparentada con el logo de Beekery |
+| Acentos | Libre Caslon Text en cursiva (siempre en azul o en oro) |
+| Texto | Hanken Grotesk |
+| Etiquetas y tickets | Courier Prime, como la máquina de escribir de los tickets del obrador |
+| Papel | `#F5EEE1` · harina `#FBF7EF` · trigo `#EADBC0` |
+| Corteza (texto) | `#2E1D13` · secundario `#6B5444` |
+| Azul Beekery | `#3D7488`, el del logo, como acento |
+| Oro / miel | `#E6BE6A` / `#B9792F` |
+| Noche (madrugada) | `#1C1410` · pizarra `#2A2621` · cacao `#3A2418` |
+| Salvia (Too Good To Go) | `#56704F` |
 
-Los botones son rectángulos sólidos con una flecha y se desplazan al pasar el cursor. Las imágenes van a sangre o enmarcadas como una copia de estudio.
+Motivos:
+- **Arco de horno**: fotos con la parte superior redondeada, como la boca de un horno.
+- **Hojas de trigo**: el ornamento de su logo, dibujado como SVG.
+- **Grano de papel**: textura sutil en toda la página.
+- **Etiqueta de papel** con agujero, para «Hoy en el horno».
+- **Pizarra con marco de madera** para la agenda de pan.
 
-## Referencias (visitadas el 17/11/2026)
-- **Lajoya** (lajoya-foods.com, mención de honor en Awwwards): un campo de color plano y saturado, display gigante y producto recortado flotando. → principio: el producto como objeto sobre el color.
-- **Agrumea Farm** (agrumeafarm.it, Site of the Day en Awwwards): un producto por pantalla y tipografía enorme detrás. → principio: dar a cada producto su escenario.
-- **Theobroma** (theobromachocolat.com, mención de honor): mayúsculas grotescas y bloques de color por sección. → principio: el color organiza la navegación.
-- **Delta Cafés** (deltacafes.com, Site of the Day): hero fotográfico a sangre con titular claro. → principio: la foto real abre la web.
-- **Impasto Forno Antico** (impastofornoantico.com): un nombre de pan por pantalla. Las imágenes WebGL no llegaron a renderizar en mi navegador; tomé solo el ritmo.
-- **FIX Chocolatier**: aprendizaje en negativo. El loader con porcentaje retrasa el contenido; la v2 no tiene loader.
+## Secciones
+1. **Hero**: titular serif «Pan sin prisa, *desde la madrugada*», la hogaza real en un arco y una etiqueta con el pan de hoy.
+2. **La pizarra**: el pan del día en una pizarra, con selector de días y botón de WhatsApp para que te guarden uno.
+3. **La madrugada** (sección nueva): franja oscura con fotos de proceso (harina, masa madre, formado, miga) que se recorre en horizontal.
+4. **Del Montgó al horno**: Blat de la Marina, con su lema real.
+5. **La vitrina**: escenario fijo que cambia a tonos suaves de horno por categoría, con fotos en arco y la carta como un menú impreso.
+6. **Nosotros**: Raquel y Luis, sus logros y una reseña real.
+7. **Encargos**: fondo cacao y formulario que prepara el mensaje de WhatsApp.
+8. **Dos obradores en Dénia**, Too Good To Go y el pie con «Beekery» en serif grande.
 
-## Movimiento
-Contenido: un ligero parallax en el hero y en el Montgó, el cambio de escenario de la vitrina y apariciones suaves de los elementos. Con `prefers-reduced-motion` se desactiva todo.
+## Referencias visitadas con Playwright (17/11/2026, escritorio 1440 px y móvil 390 px)
+| Web | Awwwards | Principio que tomo |
+|---|---|---|
+| Hart Bageri (hartbageri.com) | – | Fotografía documental de manos, masa y baldas con etiquetas de precio |
+| Sonoma Bakery (sonomabakery.com) | Mención de honor 2022 | Neutros cálidos, cortes de miga y contención |
+| Poilâne (poilane.com) | – | Una persona y la tradición familiar; el azul funciona en panadería |
+| Bäckerei Welling (baeckerei-welling.de) | Nominada 2024 | Serif Caslon, ilustración de trigo, fotos en arco |
+| Flora Café (florawellnesscafe.com) | Mención de honor 2026 | Papel crema, Caslon cursiva y mono, la carta como menú impreso |
+| Tartine (tartinebakery.com) | – | Máquina de escribir y fotos del oficio |
+| Lune Croissanterie (lunecroissanterie.com) | – | Macro del hojaldre y dramatismo en el producto |
+| Bernice Bakery (bernicebakery.com) | Mención de honor 2025 | Producto en abundancia y marcos en arco (pero demasiado juguetona) |
+| Café Binocle (cafebinocle.com) | Mención de honor 2026 | Ejemplo en negativo: demasiado marca gráfica |
+| Nine Times Bakery (ninetimesbakery.com) | Nominada 2022 | Ejemplo en negativo: plantilla genérica |
+
+Wildwood Bakery (mención de honor 2021) ya no tiene el dominio activo.

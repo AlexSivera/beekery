@@ -227,14 +227,15 @@
   /* ---------- Apariciones ---------- */
   function initReveals() {
     var sel = [
-      ".hoy-head > *", ".hoy-week", ".hoy-foot", ".origen-lede", ".chain li", ".partners",
-      ".vitrina-head > *", ".cat header", ".cat-intro", ".obrador-title", ".obrador-photo",
-      ".obrador-text", ".facts li", ".review", ".encargos-body > *", ".visita-title", ".visita-grid > *"
+      ".hoy-head > *", ".hoy-board", ".hoy-foot", ".madrugada-head > *", ".reel-item",
+      ".origen-motto", ".origen-lede", ".chain li", ".partners",
+      ".vitrina-head > *", ".cat header", ".cat-intro", ".cat-shot", ".obrador-photo", ".obrador-body",
+      ".facts li", ".review", ".encargos-body > *", ".visita-title", ".sede", ".tgtg"
     ].join(",");
     var items = $$(sel);
     if (reduce || !("IntersectionObserver" in window)) return;
     items.forEach(function (el) { el.classList.add("rv"); });
-    $$(".chain li, .facts li").forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 90 + "ms"; });
+    $$(".chain li, .facts li, .reel-item").forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 90 + "ms"; });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
