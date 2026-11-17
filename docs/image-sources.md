@@ -35,3 +35,22 @@ Faltan: bollería (cruasán, rolls, napolitana), una coca entera vista desde arr
 | `assets/v2/obrador.webp` | Banda «Hermanos», en blanco y negro | Foto real de su web (407 px) | Real, pero de baja resolución | Retrato de Raquel y Luis en el obrador, en vertical y a 1600 px o más |
 
 En las bandas y las tarjetas de la v3 también se reutilizan imágenes de la v2, documentadas arriba: `st-masa`, `st-harina`, `st-bollos`, `st-miga`, `st-hogaza-manos`, `croissant`, `coca`, `tiramisu`, `montgo-m` y `semifrio-tall`.
+
+## v3, revisión 2: fotos reales de Beekery (17/11/2026)
+Fuente: fotos subidas por la propietaria a la ficha de Google Maps «Beekery Obrador» (Av. de Gandia, 25), filtro «Del propietario». Sustituyen al stock y a las fotos de poca calidad.
+
+| Archivo | Sección | Contenido |
+|---|---|---|
+| `assets/v3/card-pan.webp` | Tarjeta «Pan» | Hogazas recién horneadas en la rejilla del obrador |
+| `assets/v3/card-cocas.webp` | Tarjeta «Cocas» | Cocas de cebolla caramelizada |
+| `assets/v3/card-bolleria.webp` | Tarjeta «Bollería» | Rolls de hojaldre en la vitrina (sustituye al cruasán de stock) |
+| `assets/v3/card-tartas.webp` | Tarjeta «Tartas» | Tarta de galleta de cacao con medallones con la B |
+| `assets/v3/card-temporada.webp` | Tarjeta «Temporada» | Panettone (sustituye a la foto de stock de manos) |
+| `assets/v3/card-semi.webp` | Tarjeta «Semifríos» | Recorte más cerrado del semifrío amarillo (`photos/source/foto_2.jpg`) |
+| `assets/v3/band-obrador.webp` | Banda «Madrugada» | Cocas formadas a mano en el obrador (sustituye a `st-masa`, de stock) |
+| `assets/v3/step-obrador.webp` | Madrugada, paso «El obrador» | El obrador con sus hornos (sustituye a `st-harina`, de stock) |
+| `assets/v3/band-tarta.webp` | Banda «Encargos» | Tarta de pistacho y frutos rojos con medallón (sustituye al semifrío con fondo gris) |
+
+Siguen siendo de stock `st-bollos` (formado a mano) y `st-miga` (la miga), y `obrador.webp` (los hermanos) sigue siendo de baja resolución.
+
+**Descartadas a propósito:** las fotos de 2023 de la ficha «Obrador Beekery». Son de la antigua cafetería del Passeig del Saladar, no del obrador de Madrigueres, que abrió el 3 de noviembre de 2026.

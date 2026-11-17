@@ -447,7 +447,7 @@ strong { font-weight: 700; }
 .band-photo { position: relative; margin: 0; min-height: 60vh; overflow: hidden; }
 .band-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .band-photo-bn img { filter: grayscale(1) contrast(1.12) brightness(1.02); }
-.band-azul .band-photo img { object-position: 50% 100%; }
+.band-azul .band-photo img { object-position: 45% 40%; }
 .band-rev .band-photo { order: 2; }
 
 .band-panel {
@@ -706,3 +706,8 @@ strong { font-weight: 700; }
 
 /* Bodoni a tamaño grande: algo más de peso y óptica de titular para que los perfiles finos aguanten */
 .duo .caps, .band-word, .ghost, .carta-title { font-weight: 600; font-variation-settings: "opsz" 40; }
+
+/* v3-2: nota diaria del pan y horario corto del segundo obrador */
+.hoy-daily { max-width: 27rem; margin: -1rem 0 2rem; padding-left: .9rem; border-left: 2px solid var(--oro); color: var(--tinta-2); font-size: .98rem; }
+.hours-short { margin-top: .4rem; }
+.sede-note a { color: var(--cafe); }
