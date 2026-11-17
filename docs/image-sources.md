@@ -54,3 +54,27 @@ Fuente: fotos subidas por la propietaria a la ficha de Google Maps «Beekery Obr
 Siguen siendo de stock `st-bollos` (formado a mano) y `st-miga` (la miga), y `obrador.webp` (los hermanos) sigue siendo de baja resolución.
 
 **Descartadas a propósito:** las fotos de 2023 de la ficha «Obrador Beekery». Son de la antigua cafetería del Passeig del Saladar, no del obrador de Madrigueres, que abrió el 3 de noviembre de 2026.
+
+## v3, revisión 3: Instagram y Facebook (17/11/2026)
+Fuente: publicaciones de @obradorbeekery en Instagram. Son fotos propias del negocio.
+
+| Archivo | Sección | Contenido |
+|---|---|---|
+| `assets/v3/band-masa.webp` | Banda «Madrugada» | Masas reposando bajo el lino (post del 31/10/2026, 1200 px) |
+| `assets/v3/card-tartas.webp` | Tarjeta «Tartas» | Tarta de boda con flores (portada de reel, 540 px: cambiarla por el original en alta) |
+| `assets/v3/sede-gandia.webp` | Dos obradores · Av. de Gandia | Fachada azul con el rótulo (portada de reel, 540 px) |
+| `assets/v3/sede-madrigueres.webp` | Dos obradores · Madrigueres | El nuevo obrador de noche (portada de reel, 640 px) |
+
+En «Madrugada» se mantienen, a petición del cliente, las fotos de stock de harina, formado y miga, que dan un acabado profesional.
+
+Datos de Facebook (página «beekerydenia»):
+- Anuncio del nuevo obrador en Ptda. Madrigueres, 26, junto al de siempre en la Avenida de Gandia.
+- Email público: beekery@hotmail.com.
+
+Datos de Instagram:
+- Reapertura el 3 de noviembre de 2026, con la dirección exacta: local 8A, detrás del San Carlos.
+- Bunyols de carabassa en Fallas.
+- Casca de Reyes.
+- Roscón sin gluten, vegano o sin azúcar.
+- Panettone y pandoro.
+- Huevos de chocolate en Pascua.
