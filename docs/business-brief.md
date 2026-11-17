@@ -9,17 +9,24 @@
 - **Lema propio** (Facebook y web antigua): «La importancia del trabajo diario y colectivo, desde la siembra hasta el horneado».
 - **Reparto**: Glovo (también Radoo según la web antigua).
 - **Redes**: Instagram @obradorbeekery (unos 3.450 seguidores; destacados: Horario, Agenda pan, Roscón de reina, Clientes top, Packs, Carta, #blatdelamarina, Tartas, Semifríos). Facebook /beekerydenia (unos 2.500 seguidores, recomendado por el 88 %).
-- **Novedad del 16/11/2026 (Facebook)**: estrenan un **nuevo obrador en Partida Madrigueres Sud, 26** («nuestra primera navidad poligonera») y sacan la primera tanda de **panettone de calabaza**. La tienda sigue en Av. de Gandia, 25.
+- **Dos obradores abiertos desde el 3/11/2026** (Instagram, posts del 2/11): Ptda. Madrigueres Sud, 26, Local 8 («detrás del San Carlos»), y Av. Gandia, 25 («donde siempre»). Antes estuvieron cerrados unos días porque no tenían potencia eléctrica para el horno (post del 19/10). La tarta de nuez se vende «en nuestros dos obradores».
+- **Fundadores**: Raquel y Luis, que abrieron Beekery en 2019 (guía FORNEA en Instagram, 11/11/2026). La misma guía habla de masa madre, fermentaciones lentas, harinas de proximidad y su paso por competiciones internacionales.
+- **Bio de Instagram**: «🎖Premio trayectoria panadera joven» y «🏅Campeona Europea». En la web los recojo tal cual, sin añadir detalles. **Hay que pedirles el nombre del concurso y el año.**
+- **Tradiciones**: la Mocadorà de Sant Dionís (9 d’Octubre), con mazapanes y su mocador. 2026 es su 7.º año y el 2.º con @amuntcontraelcancer.
+- **Otros productos recientes**: tarta de nuez de otoño (en porciones o entera por encargo), panettone de calabaza (Facebook, 16/11), rolls de chocolate, focaccia y tartas de boda (reel de junio).
+- **Eventos**: D*na Festival 2026 y mercados de artesanos de verano en Xàbia y Jesús Pobre.
 - **Reseñas**: destacan los rolls de sabores, las cocas, las empanadillas, los croissants y el desayuno. Una reseña cita literalmente: «Llevo yendo a Beekery desde hace 6 años y no me canso de sus increíbles Roll de sabores…» (Pablo M., Google).
 
 ## Sin confirmar o en conflicto
-- Instagram dice «Martes a Viernes 9h a 19h»; Google y la web dicen 8:00. **En la web uso 8:00**; hay que preguntarlo al cliente.
+- Instagram (en la bio y en el destacado «Horario», que tiene unos 3,7 años) dice «Martes a Viernes 9h a 19h»; Google y la web dicen 8:00. **En la web uso 8:00**; hay que preguntarlo al cliente.
+- No conozco el horario del local de Madrigueres. En la web pongo «consulta por WhatsApp».
 - La cabecera de beekery.es dice sábado 9–17 y domingo 9–15; Google y el pie de la web dicen 9–14. **Uso 9–14.**
-- La bio de Instagram menciona «Premio trayectoria panadera joven…» (cortado; sin sesión no pude leerlo entero y no lo encontré en prensa). **No lo uso** hasta confirmarlo.
-- No sé si el nuevo obrador del polígono atiende al público. **No lo pongo como punto de venta.**
 
 ## Cliente y acción principal
 Vecinos de Dénia que compran pan y bollería a diario, gente que encarga tartas para celebraciones y visitantes que buscan un buen horno para desayunar. Acciones: ver qué pan sale hoy, llamar o escribir por WhatsApp para que te guarden pan o encargar una tarta, y llegar a la tienda.
 
 ## Oportunidad comercial
-Acaban de estrenar obrador y se acerca su primera Navidad allí. Es buen momento para enseñarles una web a la altura (la actual es un WordPress con textos desordenados y horarios contradictorios).
+Acaban de abrir su segundo obrador y se acerca su primera Navidad con dos locales. La web actual ni siquiera menciona el local nuevo. Es buen momento para enseñarles una web a la altura (la actual es un WordPress con textos desordenados y horarios contradictorios).
+
+## Fotos de Instagram
+Instagram solo las sirve a 640 px y son de móvil, con luz y fondos variados. No mejoran la vitrina de estudio. Para la web final conviene una sesión de fotos (ver image-sources.md).
