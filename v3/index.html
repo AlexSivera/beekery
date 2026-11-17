@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Mrs+Saint+Delafield&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=v3-2" />
+  <link rel="stylesheet" href="styles.css?v=v3-3" />
   <link rel="preload" as="image" href="assets/v3/hogaza-disc.webp" />
 
   <script type="application/ld+json">
@@ -232,7 +232,7 @@
           <span class="card-name">Bollería</span><span class="card-meta">Para almorzar</span>
         </a>
         <a class="card card-e card-arch" href="#carta" data-open="tartas">
-          <img src="assets/v3/card-tartas.webp" alt="Porciones de tarta de galleta de cacao y nata de Beekery, con medallones con la B" width="780" height="1067" loading="lazy" />
+          <img src="assets/v3/card-tartas.webp" alt="Tarta de boda de dos pisos de Beekery, decorada con flores amarillas y rojas" width="540" height="740" loading="lazy" />
           <span class="card-name">Tartas</span><span class="card-meta">Enteras o al corte</span>
         </a>
         <a class="card card-f" href="#carta" data-open="temp">
@@ -307,14 +307,16 @@
           <ul class="items">
             <li>Tarta de nuez, en porciones o entera <b>otoño</b></li>
             <li>Mazapanes de Sant Dionís con su mocador <b>9 d'Octubre</b></li>
-            <li>Buñuelos <b>Todos los Santos</b></li>
+            <li>Bunyols de carabassa <b>Fallas</b></li>
             <li>Panou, mona y pan quemao <b>Pascua</b></li>
             <li>Torrijas <b>Semana Santa</b></li>
-            <li>Roscón <b>Reyes</b></li>
+            <li>Roscón, también sin gluten, vegano o sin azúcar <b>Reyes</b></li>
+            <li>Casca de Reyes <b>Reyes</b></li>
             <li>Tronco de Navidad: abeto, calabaza, orelys y caramelo de sus pipas <b>Navidad</b></li>
-            <li>Panettone <b>Navidad</b></li>
+            <li>Panettone y pandoro <b>Navidad</b></li>
             <li>Panettone de calabaza <b>novedad</b></li>
             <li>Mazapán, cascas y pastissets <b>Navidad</b></li>
+            <li>Huevos de chocolate <b>Pascua</b></li>
             <li>Bombones y figuras de chocolate</li><li>Kokos</li><li>Mantecados</li>
             <li>Pan de coca de Blat de la Marina</li><li>Coca de mermelada de higos y mascarpone</li><li>Croissant de limón y frambuesa</li>
           </ul>
@@ -325,15 +327,16 @@
     <!-- ================= BANDA · MADRUGADA ================= -->
     <section class="band band-miel" id="madrugada" aria-labelledby="madrugada-title">
       <figure class="band-photo">
-        <img src="assets/v3/band-obrador.webp" alt="En el obrador de Beekery, cocas recién formadas a mano antes de entrar al horno" width="1200" height="1517" loading="lazy" />
+        <img src="assets/v3/band-masa.webp" alt="Masas de Beekery reposando bajo paños de lino en el obrador" width="1200" height="1500" loading="lazy" />
       </figure>
       <div class="band-panel">
         <p class="vert" aria-hidden="true">El oficio · Beekery · Dénia</p>
         <p class="script band-script">mientras Dénia duerme</p>
         <p class="band-lede">La masa trabaja de noche. <strong>Masa madre, harinas de proximidad y tiempo</strong>: cada pieza se forma a mano y fermenta lo que necesita antes de entrar al horno.</p>
         <ol class="steps">
-          <li><img src="assets/v3/step-obrador.webp" alt="" width="900" height="1200" loading="lazy" /><span>El obrador</span></li>
+          <li><img src="assets/v2/st-harina.webp" alt="" width="1200" height="1800" loading="lazy" /><span>Harina</span></li>
           <li><img src="assets/v2/st-bollos.webp" alt="" width="1400" height="933" loading="lazy" /><span>Formado a mano</span></li>
+          <li><img src="assets/v3/step-obrador.webp" alt="" width="900" height="1200" loading="lazy" /><span>El obrador</span></li>
           <li><img src="assets/v2/st-miga.webp" alt="" width="1000" height="1778" loading="lazy" /><span>La miga</span></li>
         </ol>
         <p class="band-note">Por eso el pan de Beekery sabe a algo.</p>
@@ -440,6 +443,7 @@
 
       <div class="visita-grid">
         <article class="sede">
+          <figure class="sede-photo"><img src="assets/v3/sede-gandia.webp" alt="Fachada azul de Beekery en la Avenida de Gandia, 25" width="540" height="640" loading="lazy" /></figure>
           <p class="sede-n">01 · Donde siempre</p>
           <h3>Av. de Gandia, 25</h3>
           <table class="hours" data-hours>
@@ -455,9 +459,14 @@
             </tbody>
           </table>
           <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar ↗</a>
+          <div class="visita-actions">
+            <a class="btn btn-tinta" href="tel:+34722348941">Llamar · 722 34 89 41</a>
+            <a class="btn btn-line" href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
         </article>
 
         <article class="sede sede-new">
+          <figure class="sede-photo"><img src="assets/v3/sede-madrigueres.webp" alt="El nuevo obrador de Madrigueres de noche, con las bandejas listas en los carros" width="600" height="710" loading="lazy" /></figure>
           <p class="sede-n">02 · Nuevo · desde el 3 de noviembre de 2026</p>
           <h3>Ptda. Madrigueres Sud, 26 · Local 8A</h3>
           <p class="sede-note">Detrás del San Carlos. Teléfono de este obrador: <a href="tel:+34623000643">623 00 06 43</a>.</p>
@@ -472,8 +481,7 @@
           <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Partida+Madrigueres+Sud+26+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar ↗</a>
 
           <div class="visita-actions">
-            <a class="btn btn-tinta" href="tel:+34722348941">Llamar · 722 34 89 41</a>
-            <a class="btn btn-line" href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-tinta" href="tel:+34623000643">Llamar · 623 00 06 43</a>
           </div>
           <p class="delivery"><strong>¿Mejor en casa?</strong> También nos encuentras en Glovo.</p>
         </article>
@@ -503,7 +511,7 @@
     <div class="footer-col">
       <h2>Contacto</h2>
       <p>Av. de Gandia, 25 · Dénia · <a href="tel:+34722348941">722 34 89 41</a><br />Ptda. Madrigueres Sud, 26 (local 8A) · Dénia · <a href="tel:+34623000643">623 00 06 43</a></p>
-      <p><a href="tel:+34722348941">722 34 89 41</a> · <a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p><a href="tel:+34722348941">722 34 89 41</a> · <a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a><br /><a href="mailto:beekery@hotmail.com">beekery@hotmail.com</a></p>
     </div>
     <div class="footer-col">
       <h2>Síguenos</h2>
@@ -519,9 +527,9 @@
     <a href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
   </nav>
 
-  <script defer src="lib/gsap.min.js?v=v3-2"></script>
-  <script defer src="lib/ScrollTrigger.min.js?v=v3-2"></script>
-  <script defer src="lib/manifest.js?v=v3-2"></script>
-  <script defer src="main.js?v=v3-2"></script>
+  <script defer src="lib/gsap.min.js?v=v3-3"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=v3-3"></script>
+  <script defer src="lib/manifest.js?v=v3-3"></script>
+  <script defer src="main.js?v=v3-3"></script>
 </body>
 </html>

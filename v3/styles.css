@@ -480,7 +480,7 @@ strong { font-weight: 700; }
 }
 
 /* Pasos de la madrugada */
-.steps { list-style: none; margin: 2.2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; }
+.steps { list-style: none; margin: 2.2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
 .steps li { display: grid; gap: .6rem; align-content: start; }
 .steps img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 .steps li:nth-child(2) img { border-radius: 999px 999px 0 0; }
@@ -711,3 +711,11 @@ strong { font-weight: 700; }
 .hoy-daily { max-width: 27rem; margin: -1rem 0 2rem; padding-left: .9rem; border-left: 2px solid var(--oro); color: var(--tinta-2); font-size: .98rem; }
 .hours-short { margin-top: .4rem; }
 .sede-note a { color: var(--cafe); }
+@media (max-width: 860px) { .steps { grid-template-columns: repeat(2, 1fr); row-gap: 1.1rem; } .steps li:nth-child(3) img { border-radius: 999px 999px 0 0; } .steps span { font-size: .62rem; } }
+
+/* v3-3: foto de cada obrador */
+.sede-photo { margin: 0 0 1.4rem; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 999px 999px 0 0; box-shadow: 0 30px 50px -30px rgba(60,34,14,.5); }
+.sede-photo img { width: 100%; height: 100%; object-fit: cover; }
+.sede-new .sede-photo img { object-position: 50% 60%; }
+.sede:not(.sede-new) .sede-photo img { object-position: 50% 0%; }
+.sede .visita-actions { margin: 1.6rem 0 1rem; }
