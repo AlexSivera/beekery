@@ -3,62 +3,550 @@
 <head>
   <meta charset="utf-8" />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Beekery · Propuestas web</title>
-  <link rel="icon" href="v2/assets/img/logo-obrador.png" />
-  <style>
-    :root { --harina:#F3F1EC; --tinta:#22160F; --azul:#356F85; --amarillo:#F2C21B; --crema:#f5efe5; }
-    * { box-sizing: border-box; }
-    body { margin:0; min-height:100svh; background:var(--harina); color:var(--tinta);
-      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; display:flex; flex-direction:column; }
-    header { padding: 40px clamp(16px,5vw,64px) 24px; }
-    header p { margin:0 0 6px; font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#5B4D44; }
-    h1 { margin:0; font-size:clamp(32px,5vw,56px); line-height:1; letter-spacing:-.02em; }
-    main { flex:1; display:grid; grid-template-columns:1fr 1fr 1fr; }
-    a.opt { display:flex; flex-direction:column; justify-content:flex-end; gap:10px; padding:clamp(24px,4vw,56px) clamp(16px,5vw,64px);
-      min-height:52svh; text-decoration:none; color:inherit; transition:filter .2s; }
-    a.opt:hover { filter:brightness(.97); }
-    a.opt:focus-visible { outline:3px solid var(--tinta); outline-offset:-6px; }
-    .v1 { background:var(--crema); }
-    a.opt.v2 { background:#2E1D13; color:var(--harina); }
-    a.opt.v3 { background:#17110D; color:#F6EFE2; background-image: radial-gradient(60% 60% at 80% 40%, rgba(214,146,78,.35), transparent 70%); }
-    .v3 .name { font-family: "Didot", "Bodoni 72", Georgia, serif; font-weight:400; text-transform:uppercase; letter-spacing:0; font-size:clamp(30px,4.4vw,60px); }
-    .v3 .tag { color:#E3BC6C; }
-    .tag { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
-    .name { font-size:clamp(34px,5.5vw,72px); line-height:.95; font-weight:800; letter-spacing:-.02em; }
-    .v1 .name { font-family: Georgia, serif; font-weight:400; }
-    .v2 .name { font-family: Georgia, serif; font-weight:400; font-style:italic; }
-    .desc { max-width:30em; opacity:.85; }
-    .go { margin-top:8px; font-weight:700; }
-    footer { padding:16px clamp(16px,5vw,64px); font-size:13px; color:#5B4D44; }
-    @media (max-width:980px){ main{ grid-template-columns:1fr; } a.opt{ min-height:40svh; } }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Beekery · Obrador de pan y pastelería artesana en Dénia</title>
+  <meta name="description" content="Obrador artesano en Dénia desde 2019. Masa madre, trigo antiguo Blat de la Marina, tartas por encargo, cocas y bollería. Av. de Gandia, 25 y Ptda. Madrigueres Sud, 26 · 722 34 89 41." />
+  <meta name="theme-color" content="#17110D" />
+  <link rel="canonical" href="https://beekery.es/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beekery · Obrador de masa madre en Dénia" />
+  <meta property="og:description" content="Masa madre, trigo antiguo de la Marina Alta y un pan distinto cada día. Dos obradores en Dénia." />
+  <meta property="og:image" content="https://beekery.es/assets/v2/hero-hogaza.webp" />
+  <meta property="og:locale" content="es_ES" />
+
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="icon" href="assets/img/logo-obrador.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Mrs+Saint+Delafield&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=v3-8" />
+  <link rel="preload" as="image" href="assets/v3/pan-tabla.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Beekery Obrador",
+    "url": "https://beekery.es/",
+    "image": "https://beekery.es/assets/v2/hero-hogaza.webp",
+    "telephone": "+34 722 34 89 41",
+    "priceRange": "1-10 €",
+    "servesCuisine": "Panadería y pastelería artesana",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. de Gandia, 25",
+      "postalCode": "03700",
+      "addressLocality": "Dénia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 38.8414804, "longitude": 0.0982755 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "14:00" }
+    ],
+    "foundingDate": "2019",
+    "sameAs": ["https://www.instagram.com/obradorbeekery/", "https://www.facebook.com/beekerydenia"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Obrador Beekery · Madrigueres",
+    "url": "https://beekery.es/",
+    "telephone": "+34 623 00 06 43",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Partida Madrigueres Sud, 26, Local 8A",
+      "postalCode": "03700",
+      "addressLocality": "Dénia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 38.8380039, "longitude": 0.0923819 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "16:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "14:00" }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <p>Demo para Beekery Obrador · Dénia</p>
-    <h1>Tres propuestas de web</h1>
+  <!-- Ornamentos: hojas del logo y espiga de trigo en línea -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="hoja" viewBox="0 0 48 22">
+      <path d="M24 20C14 20 5 13 3 3c10 0 19 7 21 17Z M24 20c10 0 19-7 21-17-10 0-19 7-21 17Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" data-nav>
+    <a class="nav-logo" href="#top" aria-label="Beekery, inicio">
+      <img src="assets/img/logo-beekery.png" alt="Beekery" width="447" height="202" />
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#hoy">Hoy</a>
+      <a href="#vitrina">La vitrina</a>
+      <a href="#madrugada">El oficio</a>
+      <a href="#hermanos">Nosotros</a>
+      <a href="#visita">Visítanos</a>
+    </nav>
+    <p class="nav-status" data-status><i></i><span data-status-text>Mar–Vie 8–19 · Sáb–Dom 9–14</span></p>
+    <a class="nav-cta" href="#encargos">Encargar</a>
+    <button class="nav-burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sheet" data-burger>
+      <span></span><span></span>
+    </button>
   </header>
-  <main>
-    <a class="opt v1" href="v1/">
-      <span class="tag">Versión 1</span>
-      <span class="name">Crema editorial</span>
-      <span class="desc">Tono cálido y clásico: serif elegante, hogaza protagonista y la agenda de pan en tarjetas.</span>
-      <span class="go">Ver versión 1 →</span>
-    </a>
-    <a class="opt v2" href="v2/">
-      <span class="tag">Versión 2</span>
-      <span class="name">La madrugada del obrador</span>
-      <span class="desc">Papel, serif y oficio: la pizarra con el pan del día, la madrugada del obrador y una vitrina en arcos de horno.</span>
-      <span class="go">Ver versión 2 →</span>
-    </a>
-    <a class="opt v3" href="v3/">
-      <span class="tag">Versión 3</span>
-      <span class="name">Obrador Beekery</span>
-      <span class="desc">Inspirada en Bäckerei Welling: hero oscuro con la hogaza, vitrina kraft con espigas y bandas de color cruzadas por una palabra gigante.</span>
-      <span class="go">Ver versión 3 →</span>
-    </a>
+
+  <div class="sheet" id="sheet" data-sheet>
+    <nav aria-label="Menú móvil">
+      <a href="#hoy">Hoy en el horno</a>
+      <a href="#vitrina">La vitrina</a>
+      <a href="#madrugada">El oficio</a>
+      <a href="#montgo">Blat de la Marina</a>
+      <a href="#hermanos">Nosotros</a>
+      <a href="#encargos">Encargos</a>
+      <a href="#visita">Visítanos</a>
+    </nav>
+    <p class="sheet-foot">Av. de Gandia, 25 · Ptda. Madrigueres Sud, 26<br /><a href="tel:+34722348941">722 34 89 41</a></p>
+  </div>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <p class="vert vert-hero" aria-hidden="true">Benvinguts a Beekery</p>
+
+      <div class="hero-copy">
+        <h1 class="hero-title" id="hero-title">
+          <span class="script hero-script">obrador</span>
+          <span class="hero-name">Beekery</span>
+        </h1>
+        <p class="hero-sub">Pan de masa madre en Dénia, desde 2019</p>
+        <p class="hero-text">Trigo antiguo de la Marina Alta, <strong>fermentaciones largas</strong> y un pan distinto cada día. Ahora, en <strong>dos obradores</strong>.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-oro" href="#hoy">Qué sale hoy del horno</a>
+          <a class="btn btn-ghost" href="#encargos">Encargar una tarta</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-hero-media>
+        <img class="hero-bread" src="assets/v3/pan-tabla.webp" alt="Hogaza de masa madre sobre una tabla de madera, envuelta en un paño de lino" width="1024" height="854" fetchpriority="high" />
+        <svg class="ring hero-seal" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="99" class="seal-bg" />
+          <defs><path id="ring-a" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" /></defs>
+          <text><textPath href="#ring-a" textLength="458" lengthAdjust="spacing">Masa madre · Marina Alta · Desde 2019 · </textPath></text>
+          <use href="#hoja" x="70" y="86" width="60" height="28" class="seal-leaf" />
+        </svg>
+      </div>
+
+      <a class="hero-tag" href="#hoy" data-hero-today>
+        <span class="hero-tag-label" data-hero-today-label>Hoy en el horno</span>
+        <span class="hero-tag-text" data-hero-today-list>Consulta la agenda de pan</span>
+      </a>
+    </section>
+
+    <!-- ================= HOY EN EL HORNO ================= -->
+    <section class="hoy" id="hoy" aria-labelledby="hoy-title">
+      <div class="hoy-head">
+        <h2 class="duo" id="hoy-title"><span class="script">el pan</span><span class="caps">de hoy</span></h2>
+        <p class="hoy-intro">Cada pan tiene <strong>su día</strong>. Algunos solo salen del horno una vez por semana, y el de cada día se acaba.</p>
+        <p class="hoy-daily">Y todos los días: barras y hogazas de trigo <strong>blanco</strong> e <strong>integral 100%</strong>.</p>
+        <a class="btn btn-tinta" href="https://wa.me/34722348941" target="_blank" rel="noopener" data-hoy-wa>Guárdame uno por WhatsApp</a>
+      </div>
+
+      <div class="hoy-board">
+        <div class="hoy-week" role="tablist" aria-label="Elige un día" data-hoy-week>
+          <button role="tab" type="button" aria-controls="hoy-panel" data-d="2" aria-selected="true">Mar</button>
+          <button role="tab" type="button" aria-controls="hoy-panel" data-d="3" aria-selected="false">Mié</button>
+          <button role="tab" type="button" aria-controls="hoy-panel" data-d="4" aria-selected="false">Jue</button>
+          <button role="tab" type="button" aria-controls="hoy-panel" data-d="5" aria-selected="false">Vie</button>
+          <button role="tab" type="button" aria-controls="hoy-panel" data-d="6" aria-selected="false">Sáb</button>
+          <button role="tab" type="button" aria-controls="hoy-panel" data-d="0" aria-selected="false">Dom</button>
+          <button role="tab" type="button" aria-controls="hoy-panel" data-d="1" aria-selected="false">Lun</button>
+        </div>
+
+        <div class="hoy-stage" id="hoy-panel" role="tabpanel" aria-live="polite">
+          <p class="hoy-when" data-hoy-when>Hoy sale del horno</p>
+          <p class="hoy-day" data-hoy-day>Martes</p>
+          <ul class="hoy-list" data-hoy-list>
+            <li>Multicereales</li><li>Blat de la Marina</li><li>Pan inglés integral</li>
+          </ul>
+        </div>
+      </div>
+
+      <noscript>
+        <p class="hoy-noscript">Mar: Multicereales, Blat de la Marina, Pan inglés integral · Mié: Espelta integral, Centeno, Chapata · Jue: Multicereales, Blat de la Marina con espelta, Trigo sarraceno · Vie: Espelta, Brioche en molde, Blat de la Marina, Chapata · Sáb: Espelta integral, Multicereal, Blat de la Marina, Creación Beekery · Dom: Espelta, Blat de la Marina, Gran trenza de brioche rellena, Chapata · Lunes cerrado.</p>
+      </noscript>
+    </section>
+
+    <!-- ================= VITRINA ================= -->
+    <section class="vitrina" id="vitrina" aria-labelledby="vitrina-title">
+      <img class="espiga espiga-a" src="assets/v3/trigo.webp" alt="" width="500" height="720" loading="lazy" />
+      <img class="espiga espiga-b" src="assets/v3/trigo.webp" alt="" width="500" height="720" loading="lazy" />
+
+      <div class="vitrina-head">
+        <h2 class="duo" id="vitrina-title"><span class="script">nuestra</span><span class="caps">vitrina</span></h2>
+        <p class="vitrina-intro">Todo el pan se hace con <strong>nuestra masa madre</strong>. Del pan de cada día a las cocas de la Marina, la bollería de mantequilla y las tartas de celebración.</p>
+      </div>
+
+      <div class="shelf">
+        <a class="card card-arch" href="#carta" data-open="pan">
+          <img src="assets/v3/card-pan.webp" alt="Hogazas de Beekery con su dibujo de harina sobre la corteza" width="780" height="1064" loading="lazy" />
+          <span class="card-name">Pan</span><span class="card-meta">15 variedades</span>
+        </a>
+        <a class="card card-b" href="#carta" data-open="semi">
+          <img src="assets/v3/card-semi.webp" alt="Semifrío amarillo de Beekery con crumble de galleta y merengue" width="600" height="879" loading="lazy" />
+          <span class="card-name">Semifríos</span><span class="card-meta">7 de vitrina</span>
+        </a>
+        <svg class="ring ring-badge" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="ring-b" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" /></defs>
+          <text><textPath href="#ring-b" textLength="498" lengthAdjust="spacing">Obrador Beekery · Dénia · Desde 2019 · </textPath></text>
+          <use href="#hoja" x="76" y="88" width="48" height="22" />
+        </svg>
+        <a class="card card-c" href="#carta" data-open="cocas">
+          <img src="assets/v3/card-cocas.webp" alt="Cocas de Beekery recién horneadas, con cebolla caramelizada" width="780" height="1067" loading="lazy" />
+          <span class="card-name">Cocas</span><span class="card-meta">7 recetas</span>
+        </a>
+
+        <p class="ghost" aria-hidden="true"><span>Panadería</span><span>Pastelería</span><em class="script">de obrador</em></p>
+
+        <a class="card card-d" href="#carta" data-open="bolleria">
+          <img src="assets/v3/card-bolleria.webp" alt="Rolls de hojaldre de Beekery en la vitrina" width="780" height="1067" loading="lazy" />
+          <span class="card-name">Bollería</span><span class="card-meta">Para almorzar</span>
+        </a>
+        <a class="card card-e card-arch" href="#carta" data-open="tartas">
+          <img src="assets/v3/card-tartas.webp" alt="Tarta de boda de dos pisos de Beekery, decorada con flores amarillas y rojas" width="540" height="740" loading="lazy" />
+          <span class="card-name">Tartas</span><span class="card-meta">Enteras o al corte</span>
+        </a>
+        <a class="card card-f" href="#carta" data-open="temp">
+          <img src="assets/v3/card-temporada.webp" alt="Panettone de Beekery con azúcar perlado" width="780" height="1067" loading="lazy" style="object-position: 50% 100%" />
+          <span class="card-name">Temporada</span><span class="card-meta">Según el calendario</span>
+        </a>
+      </div>
+
+      <!-- La carta -->
+      <div class="carta" id="carta">
+        <div class="carta-top">
+          <h3 class="carta-title">La carta</h3>
+          <a class="link" href="assets/carta-beekery.pdf" target="_blank" rel="noopener">Carta completa en PDF ↓</a>
+        </div>
+        <div class="carta-tabs" role="tablist" aria-label="Categorías de la carta" data-carta-tabs>
+          <button role="tab" type="button" id="t-pan" aria-controls="p-pan" aria-selected="true" data-k="pan">Pan</button>
+          <button role="tab" type="button" id="t-semi" aria-controls="p-semi" aria-selected="false" tabindex="-1" data-k="semi">Semifríos</button>
+          <button role="tab" type="button" id="t-cocas" aria-controls="p-cocas" aria-selected="false" tabindex="-1" data-k="cocas">Cocas</button>
+          <button role="tab" type="button" id="t-bolleria" aria-controls="p-bolleria" aria-selected="false" tabindex="-1" data-k="bolleria">Bollería</button>
+          <button role="tab" type="button" id="t-tartas" aria-controls="p-tartas" aria-selected="false" tabindex="-1" data-k="tartas">Tartas</button>
+          <button role="tab" type="button" id="t-temp" aria-controls="p-temp" aria-selected="false" tabindex="-1" data-k="temp">Temporada</button>
+        </div>
+
+        <div class="carta-panel" id="p-pan" role="tabpanel" aria-labelledby="t-pan">
+          <p class="carta-intro">Harinas que se notan y fermentaciones largas. Algunos panes solo salen ciertos días: <a href="#hoy">mira el pan de hoy</a>.</p>
+          <ul class="items">
+            <li>Trigo blanco</li><li>Integral de trigo</li><li>Molde blanco</li><li>Molde integral</li>
+            <li>Espelta</li><li>Espelta integral</li><li>Multicereal</li><li>Centeno</li>
+            <li>Centeno con cerveza y nueces</li><li>Trigo sarraceno</li><li>Triticum turgidum</li><li>Calabaza</li>
+            <li>Vino</li><li>Tomate con olivas negras</li><li>Tomate con hierbas provenzales</li>
+          </ul>
+          <p class="items-sub">También hay pan y bollería sin gluten: pregúntanos qué tenemos hoy.</p>
+        </div>
+        <div class="carta-panel" id="p-semi" role="tabpanel" aria-labelledby="t-semi" hidden>
+          <p class="carta-intro">Pastelería fresca de vitrina. Tres de ellos, 100% vegetales.</p>
+          <ul class="items">
+            <li>Cacao</li><li>Yogur, lotus y fruta de la pasión</li><li>3 chocos</li><li>Vainilla, plátano y tofe</li>
+            <li>Mango y pistacho <b>vegano</b></li>
+            <li>Fresas con chocolate negro bio <b>vegano</b></li>
+            <li>Coco, avellanas y chocolate con leche de almendras <b>vegano</b></li>
+          </ul>
+        </div>
+        <div class="carta-panel" id="p-cocas" role="tabpanel" aria-labelledby="t-cocas" hidden>
+          <p class="carta-intro">La coca de la Marina de toda la vida, con masa de obrador.</p>
+          <ul class="items">
+            <li>Espinacas y queso de cabra</li><li>Verduras al horno</li><li>Lomo adobado</li>
+            <li>Guisantes con jamón serrano y cebolla caramelizada</li><li>Atún con tomate</li><li>Anchoas</li><li>Aceite y hierbas provenzales</li>
+          </ul>
+        </div>
+        <div class="carta-panel" id="p-bolleria" role="tabpanel" aria-labelledby="t-bolleria" hidden>
+          <p class="carta-intro">Hojaldres hechos con mantequilla, rolls y empanadillas.</p>
+          <ul class="items">
+            <li>Croissant</li><li>Croissant de almendra</li><li>Napolitana de chocolate</li><li>Napolitana de jamón y queso</li>
+            <li>Cuadrado de bacon, brie y pera</li><li>Roll de arándanos y crema</li><li>Roll de Nutella</li><li>Roll de Kinder</li>
+            <li>Roll de praliné de nuez pecán</li><li>Pepitos de chocolate</li><li>Bollos</li><li>Trenzas con azúcar y almendra</li>
+            <li>Cookies</li><li>Brownies</li>
+            <li>Empanadilla Tex-Mex de carne picada</li><li>Empanadilla de morcilla, cebolla caramelizada y mermelada de tomate</li>
+            <li>Empanadilla de atún con verduras y huevo</li><li>Empanadilla de queso crema, jamón york y tomate</li>
+          </ul>
+        </div>
+        <div class="carta-panel" id="p-tartas" role="tabpanel" aria-labelledby="t-tartas" hidden>
+          <p class="carta-intro">Enteras por encargo o al corte en vitrina. <a href="#encargos">Encarga la tuya</a>.</p>
+          <ul class="items">
+            <li>Tiramisú</li><li>Selva negra</li><li>Carrot cake</li><li>Vainilla y almendra</li><li>Milhojas</li>
+            <li>Tarta de queso</li><li>Fresas, mascarpone y pistacho</li><li>Frambuesa</li><li>Avellanas y frutas del bosque</li>
+            <li>Lemon pie</li><li>Chocolate y caramelo</li><li>Todo chocolate</li><li>Oreo</li>
+          </ul>
+          <p class="items-sub">Al corte: almendra · queso · manzana</p>
+        </div>
+        <div class="carta-panel" id="p-temp" role="tabpanel" aria-labelledby="t-temp" hidden>
+          <p class="carta-intro">Lo que marca el calendario. Pregunta por fechas y encargos.</p>
+          <ul class="items">
+            <li>Tarta de nuez, en porciones o entera <b>otoño</b></li>
+            <li>Mazapanes de Sant Dionís con su mocador <b>9 d'Octubre</b></li>
+            <li>Bunyols de carabassa <b>Fallas</b></li>
+            <li>Panou, mona y pan quemao <b>Pascua</b></li>
+            <li>Torrijas <b>Semana Santa</b></li>
+            <li>Roscón, también sin gluten, vegano o sin azúcar <b>Reyes</b></li>
+            <li>Casca de Reyes <b>Reyes</b></li>
+            <li>Tronco de Navidad: abeto, calabaza, orelys y caramelo de sus pipas <b>Navidad</b></li>
+            <li>Panettone y pandoro <b>Navidad</b></li>
+            <li>Panettone de calabaza <b>novedad</b></li>
+            <li>Mazapán, cascas y pastissets <b>Navidad</b></li>
+            <li>Huevos de chocolate <b>Pascua</b></li>
+            <li>Bombones y figuras de chocolate</li><li>Kokos</li><li>Mantecados</li>
+            <li>Pan de coca de Blat de la Marina</li><li>Coca de mermelada de higos y mascarpone</li><li>Croissant de limón y frambuesa</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BANDA · MADRUGADA ================= -->
+    <section class="band band-miel" id="madrugada" aria-labelledby="madrugada-title">
+      <figure class="band-photo">
+        <img src="assets/v3/band-masa.webp" alt="Masas de Beekery reposando bajo paños de lino en el obrador" width="1200" height="1500" loading="lazy" />
+      </figure>
+      <div class="band-panel">
+        <p class="vert" aria-hidden="true">El oficio · Beekery · Dénia</p>
+        <p class="script band-script">mientras Dénia duerme</p>
+        <p class="band-lede">La masa trabaja de noche. <strong>Masa madre, harinas de proximidad y tiempo</strong>: cada pieza se forma a mano y fermenta lo que necesita antes de entrar al horno.</p>
+        <ol class="steps">
+          <li><img src="assets/v2/st-harina.webp" alt="" width="1200" height="1800" loading="lazy" /><span>Harina</span></li>
+          <li><img src="assets/v2/st-bollos.webp" alt="" width="1400" height="933" loading="lazy" /><span>Formado a mano</span></li>
+          <li><img src="assets/v3/step-obrador.webp" alt="" width="900" height="1200" loading="lazy" /><span>El obrador</span></li>
+          <li><img src="assets/v2/st-miga.webp" alt="" width="1000" height="1778" loading="lazy" /><span>La miga</span></li>
+        </ol>
+        <p class="band-note">Por eso el pan de Beekery sabe a algo.</p>
+      </div>
+      <h2 class="band-word" id="madrugada-title" data-drift>Madrugada</h2>
+    </section>
+
+    <!-- ================= BANDA · MONTGÓ ================= -->
+    <section class="band band-salvia band-rev" id="montgo" aria-labelledby="montgo-title">
+      <figure class="band-photo">
+        <img src="assets/v2/montgo-m.webp" alt="Trigo verde creciendo a los pies del Montgó, en Dénia" width="800" height="840" loading="lazy" />
+      </figure>
+      <div class="band-panel">
+        <p class="vert" aria-hidden="true">Blat de la Marina · desde la siembra</p>
+        <p class="script band-script">del campo al horno</p>
+        <p class="band-quote">«La importancia del trabajo diario y colectivo, desde la siembra hasta el horneado.»</p>
+        <p class="band-lede">Con el proyecto <strong>Blat de la Marina</strong> volvemos a cultivar y moler variedades antiguas de trigo de nuestra comarca: la cadena de siempre entre labradores, moledores y panaderos.</p>
+        <ol class="chain">
+          <li><span>I</span>Siembra</li><li><span>II</span>Molienda</li><li><span>III</span>Fermentación</li><li><span>IV</span>Horno</li>
+        </ol>
+        <div class="partners">
+          <img src="assets/img/logo-blat.png" alt="Blat de la Marina" width="598" height="483" loading="lazy" class="partner-blat" />
+          <img src="assets/img/logo-riurau.png" alt="Mercat del Riurau" width="104" height="144" loading="lazy" />
+          <img src="assets/img/logo-farinera.png" alt="Farinera" width="105" height="150" loading="lazy" />
+          <a class="link link-light" href="http://www.mercatdelriurau.org/index.php/el-blat/" target="_blank" rel="noopener">Conoce el proyecto ↗</a>
+        </div>
+      </div>
+      <h2 class="band-word" id="montgo-title" data-drift>Montgó</h2>
+    </section>
+
+    <!-- ================= BANDA · HERMANOS ================= -->
+    <section class="band band-cacao" id="hermanos" aria-labelledby="hermanos-title">
+      <figure class="band-photo band-photo-bn">
+        <img src="assets/v2/obrador.webp" alt="Los panaderos de Beekery echando harina en un barreño, frente a los hornos del obrador" width="407" height="477" loading="lazy" />
+      </figure>
+      <div class="band-panel">
+        <p class="vert" aria-hidden="true">Raquel y Luis · Van Beek</p>
+        <p class="band-kicker">Raquel y Luis, los hermanos Van Beek</p>
+        <p class="band-lede">Beekery nace del sueño de dos hermanos enamorados de la panadería tradicional. Tras clasificarse para un mundial de panadería y ver su receta de <strong>Panou entrar en el Banco de Recetas de la UNESCO</strong>, la idea empezó a tomar forma.</p>
+        <p>Mientras Raquel trabajaba en algunas de las cocinas más prestigiosas del país, el proyecto se fue perfilando: una panadería que no entiende de prisas. En <strong>2019</strong> encendieron el horno de la Avenida de Gandia, y el <strong>3 de noviembre de 2026</strong> abrieron un segundo obrador en la Partida Madrigueres.</p>
+        <p>Por el camino recuperaron tradiciones como la <strong>Mocadorà de Sant Dionís</strong>, que este año cumple su séptima edición en Beekery y la segunda junto a Amunt contra el Cáncer.</p>
+        <ul class="facts">
+          <li><strong>Panou</strong>en el Banco de Recetas de la UNESCO</li>
+          <li><strong>Campeona europea</strong>en competición internacional</li>
+          <li><strong>Premio</strong>a la trayectoria panadera joven</li>
+          <li><strong>Harina propia</strong>del proyecto Blat de la Marina</li>
+        </ul>
+        <blockquote class="review">
+          <p>«Llevo yendo a Beekery desde hace 6 años y no me canso de sus increíbles Roll de sabores, sus cocas, empanadillas y sus croissant.»</p>
+          <footer>Pablo M. · reseña en Google · 4,3 ★ con más de 200 reseñas</footer>
+        </blockquote>
+        <p class="script band-sign" aria-hidden="true">Van Beek</p>
+      </div>
+      <h2 class="band-word" id="hermanos-title" data-drift>Hermanos</h2>
+    </section>
+
+    <!-- ================= BANDA · ENCARGOS ================= -->
+    <section class="band band-azul band-rev" id="encargos" aria-labelledby="encargos-title">
+      <figure class="band-photo">
+        <img src="assets/v3/band-tarta.webp" alt="Tarta de pistacho y frutos rojos de Beekery, con su medallón con la B" width="800" height="1067" loading="lazy" />
+      </figure>
+      <div class="band-panel">
+        <p class="vert" aria-hidden="true">Tartas · celebraciones · pan para eventos</p>
+        <p class="script band-script">tu tarta, por encargo</p>
+        <p class="band-lede">Dinos qué te apetece y para cuándo. El mensaje se prepara solo y te confirmamos por WhatsApp.</p>
+
+        <form class="order" data-order novalidate>
+          <label class="field field-full">
+            <span>¿Qué te apetece?</span>
+            <select name="producto">
+              <option>Tarta de queso</option><option>Tiramisú</option><option>Selva negra</option><option>Carrot cake</option>
+              <option>Fresas, mascarpone y pistacho</option><option>Todo chocolate</option><option>Lemon pie</option>
+              <option>Tarta de nuez</option><option>Semifrío (a elegir)</option><option>Tarta de boda o celebración</option><option>Pan para un evento</option><option>Otra cosa (te lo cuento)</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Para el día</span>
+            <input type="date" name="fecha" required />
+          </label>
+          <label class="field">
+            <span>Raciones</span>
+            <input type="number" name="raciones" min="2" max="60" value="8" inputmode="numeric" />
+          </label>
+          <label class="field field-full">
+            <span>Tu nombre</span>
+            <input type="text" name="nombre" autocomplete="given-name" required />
+          </label>
+          <label class="field field-full">
+            <span>Algo más <small>(opcional)</small></span>
+            <textarea name="notas" rows="2" placeholder="Alergias, un mensaje escrito, velas…"></textarea>
+          </label>
+          <button class="btn btn-oro field-full" type="submit">Preparar mensaje de WhatsApp</button>
+          <p class="order-hint">Se abrirá WhatsApp con tu pedido escrito. No se envía nada hasta que tú le des a enviar.</p>
+        </form>
+      </div>
+      <h2 class="band-word" id="encargos-title" data-drift>Encargos</h2>
+    </section>
+
+    <!-- ================= VISITA · DOS OBRADORES ================= -->
+    <section class="visita" id="visita" aria-labelledby="visita-title">
+      <img class="espiga espiga-c" src="assets/v3/trigo.webp" alt="" width="500" height="720" loading="lazy" />
+      <h2 class="duo" id="visita-title"><span class="script">dos</span><span class="caps">obradores</span></h2>
+      <p class="visita-intro">Los dos en Dénia, a un paseo el uno del otro. Mira cuál está abierto y ven a por tu pan.</p>
+
+      <div class="obradores">
+        <article class="obr" data-sede="gandia" aria-labelledby="obr-gandia">
+          <figure class="obr-photo"><img src="assets/v3/sede-gandia.webp" alt="Fachada azul de Beekery en la Avenida de Gandia, 25" width="540" height="640" loading="lazy" /></figure>
+          <div class="obr-head">
+            <span class="obr-n" aria-hidden="true">01</span>
+            <div>
+              <p class="obr-kicker">El de siempre</p>
+              <h3 id="obr-gandia">Avenida de Gandia</h3>
+            </div>
+          </div>
+          <p class="obr-status" data-sede-status><i></i><span>Mar–Vie 8–19 · Sáb–Dom 9–14</span></p>
+          <p class="obr-addr">Av. de Gandia, 25 · 03700 Dénia</p>
+          <table class="obr-hours">
+            <caption class="sr-only">Horario del obrador de la Avenida de Gandia</caption>
+            <tbody>
+              <tr data-days="2 3 4 5"><th scope="row">Martes a viernes</th><td>8:00 – 19:00</td></tr>
+              <tr data-days="6 0"><th scope="row">Sábado y domingo</th><td>9:00 – 14:00</td></tr>
+              <tr data-days="1" class="is-closed"><th scope="row">Lunes</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+          <div class="obr-actions">
+            <a class="btn btn-tinta" href="tel:+34722348941">Llamar · 722 34 89 41</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+          <div class="obr-map">
+            <img src="assets/v3/map-gandia.svg" alt="Mapa ilustrado del barrio del obrador de la Avenida de Gandia, con el colegio Llebeig, Hiper Dénia y el obrador de Madrigueres al suroeste" width="1000" height="750" loading="lazy" />
+            <span class="map-street" style="left:36.4%;top:24.9%">Av. de Gandia</span>
+            <span class="map-street" style="left:70.3%;top:69.1%">Av. de València</span>
+            <span class="map-chip" style="left:54.6%;top:84.7%">Col·legi Llebeig</span>
+            <span class="map-chip is-left" style="left:39.7%;top:84.2%">Hiper Dénia</span>
+            <span class="map-other" style="left:9.1%;top:91.3%">02</span>
+            <a class="map-pin" style="left:60.2%;top:39.7%" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener" aria-label="Abrir el obrador de la Avenida de Gandia en Google Maps"><span class="map-here is-right">¡Aquí!<small>Beekery · Av. de Gandia</small></span></a>
+            <a class="map-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>
+          </div>
+        </article>
+
+        <div class="obr-amp" aria-hidden="true"><span class="script">&amp;</span></div>
+
+        <article class="obr" data-sede="madrigueres" aria-labelledby="obr-madrigueres">
+          <figure class="obr-photo"><img src="assets/v3/sede-madrigueres.webp" alt="El obrador de Madrigueres de noche, con las bandejas listas en los carros" width="600" height="710" loading="lazy" /></figure>
+          <div class="obr-head">
+            <span class="obr-n" aria-hidden="true">02</span>
+            <div>
+              <p class="obr-kicker">Detrás del San Carlos</p>
+              <h3 id="obr-madrigueres">Madrigueres</h3>
+            </div>
+          </div>
+          <p class="obr-status" data-sede-status><i></i><span>Mar–Vie 8–16 · Sáb–Dom 9–14</span></p>
+          <p class="obr-addr">Ptda. Madrigueres Sud, 26 · Local 8A · 03700 Dénia</p>
+          <table class="obr-hours">
+            <caption class="sr-only">Horario del obrador de Madrigueres</caption>
+            <tbody>
+              <tr data-days="2 3 4 5"><th scope="row">Martes a viernes</th><td>8:00 – 16:00</td></tr>
+              <tr data-days="6 0"><th scope="row">Sábado y domingo</th><td>9:00 – 14:00</td></tr>
+              <tr data-days="1" class="is-closed"><th scope="row">Lunes</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+          <div class="obr-actions">
+            <a class="btn btn-tinta" href="tel:+34623000643">Llamar · 623 00 06 43</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Obrador+Beekery+Partida+Madrigueres+Sud+26+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+          <div class="obr-map">
+            <img src="assets/v3/map-madrigueres.svg" alt="Mapa ilustrado de la zona del obrador de Madrigueres, junto al Hospital San Carlos, con el Lidl y el cementerio cerca y el obrador de la Avenida de Gandia al noreste" width="1000" height="750" loading="lazy" />
+            <span class="map-street" style="left:78.1%;top:46.5%">Av. de València</span>
+            <span class="map-chip" style="left:45.6%;top:62.5%">Hospital San Carlos</span>
+            <span class="map-chip" style="left:45.5%;top:37.5%">Lidl</span>
+            <span class="map-chip" style="left:56.7%;top:86%">Cementeri</span>
+            <span class="map-other" style="left:90.9%;top:8.7%">01</span>
+            <a class="map-pin" style="left:39.8%;top:60.3%" href="https://www.google.com/maps/search/?api=1&amp;query=Obrador+Beekery+Partida+Madrigueres+Sud+26+D%C3%A9nia" target="_blank" rel="noopener" aria-label="Abrir el obrador de Madrigueres en Google Maps"><span class="map-here">¡Aquí!<small>Beekery · Madrigueres</small></span></a>
+            <a class="map-credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© colaboradores de OpenStreetMap</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="visita-extra">
+        <aside class="tgtg" aria-labelledby="tgtg-title">
+          <div>
+            <p class="tgtg-kicker">Aquí no se tira nada</p>
+            <h3 id="tgtg-title">Lo que sobra del día, en Too Good To Go</h3>
+          </div>
+          <p>Packs a precio reducido de pastelería, sin gluten y, según la época, roscón o monas. Lo reservas en la app y lo recoges en la Avenida de Gandia.</p>
+          <a class="link link-light" href="https://www.toogoodtogo.com/es/find/denia/beekery-denia/bakedgoods/packpasteleria-763979" target="_blank" rel="noopener">Ver en Too Good To Go ↗</a>
+        </aside>
+        <p class="delivery"><strong>¿Mejor en casa?</strong> También nos encuentras en Glovo. Y para encargos y dudas, <a href="https://wa.me/34722348941" target="_blank" rel="noopener">escríbenos por WhatsApp</a>.</p>
+      </div>
+    </section>
   </main>
-  <footer>Propuesta de diseño. No es la web oficial de Beekery: <a href="https://beekery.es/">beekery.es</a></footer>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/img/logo-beekery.png" alt="Beekery" width="447" height="202" loading="lazy" />
+      <p class="footer-motto"><svg class="hoja" aria-hidden="true"><use href="#hoja" /></svg> El sabor que recuerdas</p>
+      <p>Pan y pastelería artesana en Dénia desde 2019. Masa madre, harinas de proximidad y trigo antiguo de la Marina Alta.</p>
+    </div>
+    <div class="footer-col">
+      <h2>Contacto</h2>
+      <p>Av. de Gandia, 25 · Dénia · <a href="tel:+34722348941">722 34 89 41</a><br />Ptda. Madrigueres Sud, 26 (local 8A) · Dénia · <a href="tel:+34623000643">623 00 06 43</a></p>
+      <p><a href="tel:+34722348941">722 34 89 41</a> · <a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a><br /><a href="mailto:beekery@hotmail.com">beekery@hotmail.com</a></p>
+    </div>
+    <div class="footer-col">
+      <h2>Síguenos</h2>
+      <p><a href="https://www.instagram.com/obradorbeekery/" target="_blank" rel="noopener">Instagram · @obradorbeekery</a><br /><a href="https://www.facebook.com/beekerydenia" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+    <p class="footer-legal">© <span data-year>2026</span> Beekery Obrador</p>
+  </footer>
+
+  <!-- Acciones rápidas en móvil -->
+  <nav class="dock" aria-label="Acciones rápidas">
+    <a href="tel:+34722348941">Llamar</a>
+    <a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
+  </nav>
+
+  <script defer src="lib/gsap.min.js?v=v3-8"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=v3-8"></script>
+  <script defer src="lib/manifest.js?v=v3-8"></script>
+  <script defer src="main.js?v=v3-8"></script>
 </body>
 </html>
