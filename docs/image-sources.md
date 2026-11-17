@@ -25,3 +25,13 @@ Las fotos de stock son de ambiente y proceso: manos sin cara, masa y harina. Nin
 ## Brief para la sesión de fotos
 Mismo lenguaje que las fotos actuales de producto: estudio, fondo blanco o de color plano, luz lateral suave y el producto ocupando la mitad inferior del encuadre.
 Faltan: bollería (cruasán, rolls, napolitana), una coca entera vista desde arriba, roscón y panettone de temporada, el horno abierto y las manos trabajando la masa.
+
+## Añadidas en la v3 (rama `rediseno-v3`)
+| Archivo | Sección | Origen | Real / provisional | Recomendación |
+|---|---|---|---|---|
+| `assets/v3/hogaza-disc.webp` | Hero (disco de la hogaza) | Recorte circular de `hero-hogaza.webp`, foto real de su web, volteada | Real | Sustituir por una cenital de una hogaza recién salida, sobre fondo oscuro, a 1600 px o más, para recortarla limpia |
+| `assets/v3/card-pan.webp` | Tarjeta «Pan» | Recorte vertical de `assets/img/hogaza.jpg`, foto real de su web | Real | Hogaza y barra cortadas, mostrando la miga, en vertical |
+| `assets/v3/card-semi.webp` | Tarjeta «Semifríos» | Recorte de `photos/source/foto_2.jpg`, foto real de su web | Real | Semifrío de vitrina en vertical, más cerrado |
+| `assets/v2/obrador.webp` | Banda «Hermanos», en blanco y negro | Foto real de su web (407 px) | Real, pero de baja resolución | Retrato de Raquel y Luis en el obrador, en vertical y a 1600 px o más |
+
+En las bandas y las tarjetas de la v3 también se reutilizan imágenes de la v2, documentadas arriba: `st-masa`, `st-harina`, `st-bollos`, `st-miga`, `st-hogaza-manos`, `croissant`, `coca`, `tiramisu`, `montgo-m` y `semifrio-tall`.

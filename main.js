@@ -1,4 +1,4 @@
-/* Beekery v2 — comportamiento.
+/* Beekery v3 — comportamiento.
    El contenido vive en el HTML; los horarios y la agenda en lib/manifest.js. */
 (function () {
   "use strict";
@@ -166,27 +166,38 @@
     $$("main section[id]").forEach(function (s) { io.observe(s); });
   }
 
-  /* ---------- Vitrina: el escenario cambia de color y producto ---------- */
-  function initVitrina() {
-    var stage = $("[data-stage]"), cats = $$("[data-cat]"), caption = $("[data-stage-caption]");
-    if (!stage || !cats.length || !("IntersectionObserver" in window)) return;
-    var shots = $$("[data-shot]", stage), current = null;
-
-    function activate(cat) {
-      var key = cat.getAttribute("data-cat");
-      if (key === current) return;
-      current = key;
-      stage.style.setProperty("--stage-c", cat.style.getPropertyValue("--c"));
-      stage.style.setProperty("--stage-on", cat.style.getPropertyValue("--on"));
-      shots.forEach(function (s) { s.classList.toggle("is-active", s.getAttribute("data-shot") === key); });
-      if (caption) caption.textContent = String(cats.indexOf(cat) + 1).padStart(2, "0");
+  /* ---------- La carta: pestañas + tarjetas de la vitrina ---------- */
+  function initCarta() {
+    var tabs = $$("[data-carta-tabs] [role=tab]");
+    if (!tabs.length) return;
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        var p = document.getElementById(t.getAttribute("aria-controls"));
+        if (p) p.hidden = !on;
+      });
+      if (focus) tab.focus();
     }
-    activate(cats[0]);
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) activate(e.target); });
-    }, { rootMargin: "-50% 0px -50% 0px" });
-    cats.forEach(function (c) { io.observe(c); });
+    tabs.forEach(function (t, i) {
+      t.addEventListener("click", function () { select(t); });
+      t.addEventListener("keydown", function (e) {
+        var n = null;
+        if (e.key === "ArrowRight") n = tabs[(i + 1) % tabs.length];
+        if (e.key === "ArrowLeft") n = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (e.key === "Home") n = tabs[0];
+        if (e.key === "End") n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); select(n, true); }
+      });
+    });
+    $$("[data-open]").forEach(function (card) {
+      card.addEventListener("click", function () {
+        var k = card.getAttribute("data-open");
+        var t = tabs.filter(function (x) { return x.getAttribute("data-k") === k; })[0];
+        if (t) select(t);
+      });
+    });
   }
 
   /* ---------- Encargo por WhatsApp ---------- */
@@ -227,15 +238,13 @@
   /* ---------- Apariciones ---------- */
   function initReveals() {
     var sel = [
-      ".hoy-head > *", ".hoy-board", ".hoy-foot", ".madrugada-head > *", ".reel-item",
-      ".origen-motto", ".origen-lede", ".chain li", ".partners",
-      ".vitrina-head > *", ".cat header", ".cat-intro", ".cat-shot", ".obrador-photo", ".obrador-body",
-      ".facts li", ".review", ".encargos-body > *", ".visita-title", ".sede", ".tgtg"
+      ".hoy-head > *", ".hoy-board", ".vitrina-head > *", ".shelf > .card", ".carta",
+      ".band-panel > *:not(.vert)", ".visita > .duo", ".visita-intro", ".sede", ".tgtg", ".map"
     ].join(",");
     var items = $$(sel);
     if (reduce || !("IntersectionObserver" in window)) return;
     items.forEach(function (el) { el.classList.add("rv"); });
-    $$(".chain li, .facts li, .reel-item").forEach(function (el, i) { el.style.transitionDelay = (i % 4) * 90 + "ms"; });
+    $$(".shelf > .card").forEach(function (el, i) { el.style.transitionDelay = (i % 3) * 110 + "ms"; });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px" });
@@ -248,28 +257,30 @@
     if (reduce || !window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
 
-    var heroImg = $("[data-hero-media] img");
-    if (heroImg) {
-      gsap.to(heroImg, { scale: 1.08, yPercent: 4, ease: "none",
+    // La hogaza gira un poco al salir del hero
+    var loaf = $(".hero-disc");
+    if (loaf) {
+      gsap.to(loaf, { rotate: 24, yPercent: 8, ease: "none",
         scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     }
-    var montgo = $("[data-parallax]");
-    if (montgo) {
-      gsap.fromTo(montgo, { yPercent: -7 }, { yPercent: 7, ease: "none",
-        scrollTrigger: { trigger: ".origen-hero", start: "top bottom", end: "bottom top", scrub: true } });
-    }
-    var oTitle = $(".origen-title");
-    if (oTitle) {
-      gsap.fromTo(oTitle, { yPercent: 18 }, { yPercent: 0, ease: "none",
-        scrollTrigger: { trigger: ".origen-hero", start: "top bottom", end: "center center", scrub: true } });
-    }
+    // Las palabras gigantes de las bandas se deslizan al cruzar la pantalla
+    $$("[data-drift]").forEach(function (w, i) {
+      var dir = i % 2 ? -1 : 1;
+      gsap.fromTo(w, { xPercent: 6 * dir }, { xPercent: -6 * dir, ease: "none",
+        scrollTrigger: { trigger: w.parentNode, start: "top bottom", end: "bottom top", scrub: true } });
+    });
+    // Fotos de las bandas con un parallax suave
+    $$(".band-photo img").forEach(function (img) {
+      gsap.fromTo(img, { yPercent: -4, scale: 1.1 }, { yPercent: 4, scale: 1.1, ease: "none",
+        scrollTrigger: { trigger: img.closest(".band"), start: "top bottom", end: "bottom top", scrub: true } });
+    });
   }
 
   function boot() {
     safe(initStatus, "status");
     safe(initHoy, "hoy");
     safe(initNav, "nav");
-    safe(initVitrina, "vitrina");
+    safe(initCarta, "carta");
     safe(initOrder, "order");
     safe(initReveals, "reveals");
     safe(initScroll, "scroll");
