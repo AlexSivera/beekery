@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beekery · Propuestas web</title>
+  <link rel="icon" href="v2/assets/img/logo-obrador.png" />
+  <style>
+    :root { --harina:#F3F1EC; --tinta:#22160F; --azul:#356F85; --amarillo:#F2C21B; --crema:#f5efe5; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100svh; background:var(--harina); color:var(--tinta);
+      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; display:flex; flex-direction:column; }
+    header { padding: 40px clamp(16px,5vw,64px) 24px; }
+    header p { margin:0 0 6px; font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#5B4D44; }
+    h1 { margin:0; font-size:clamp(32px,5vw,56px); line-height:1; letter-spacing:-.02em; }
+    main { flex:1; display:grid; grid-template-columns:1fr 1fr; }
+    a.opt { display:flex; flex-direction:column; justify-content:flex-end; gap:10px; padding:clamp(24px,4vw,56px) clamp(16px,5vw,64px);
+      min-height:52svh; text-decoration:none; color:inherit; transition:filter .2s; }
+    a.opt:hover { filter:brightness(.97); }
+    a.opt:focus-visible { outline:3px solid var(--tinta); outline-offset:-6px; }
+    .v1 { background:var(--crema); }
+    .v2 { background:var(--azul); color:var(--harina); }
+    .tag { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    .name { font-size:clamp(34px,5.5vw,72px); line-height:.95; font-weight:800; letter-spacing:-.02em; }
+    .v1 .name { font-family: Georgia, serif; font-weight:400; }
+    .v2 .name { text-transform:uppercase; font-stretch:condensed; }
+    .desc { max-width:30em; opacity:.85; }
+    .go { margin-top:8px; font-weight:700; }
+    footer { padding:16px clamp(16px,5vw,64px); font-size:13px; color:#5B4D44; }
+    @media (max-width:720px){ main{ grid-template-columns:1fr; } a.opt{ min-height:40svh; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p>Demo para Beekery Obrador · Dénia</p>
+    <h1>Dos propuestas de web</h1>
+  </header>
+  <main>
+    <a class="opt v1" href="v1/">
+      <span class="tag">Versión 1</span>
+      <span class="name">Crema editorial</span>
+      <span class="desc">Tono cálido y clásico: serif elegante, hogaza protagonista y la agenda de pan en tarjetas.</span>
+      <span class="go">Ver versión 1 →</span>
+    </a>
+    <a class="opt v2" href="v2/">
+      <span class="tag">Versión 2</span>
+      <span class="name">Bodegón de obrador</span>
+      <span class="desc">Campos de color, producto como objeto y tipografía grande. «Hoy en el horno» y una vitrina que cambia de color.</span>
+      <span class="go">Ver versión 2 →</span>
+    </a>
+  </main>
+  <footer>Propuesta de diseño. No es la web oficial de Beekery: <a href="https://beekery.es/">beekery.es</a></footer>
+</body>
+</html>
