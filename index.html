@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Beekery · Obrador de pan y pastelería artesana en Dénia</title>
-  <meta name="description" content="Obrador artesano en Dénia. Pan de fermentación lenta con trigo antiguo Blat de la Marina, tartas por encargo, cocas y bollería. Av. de Gandia, 25." />
-  <meta name="theme-color" content="#f5efe5" />
+  <meta name="description" content="Obrador artesano en Dénia. Pan de fermentación lenta con trigo antiguo Blat de la Marina, tartas por encargo, cocas y bollería. Av. de Gandia, 25 · 722 34 89 41." />
+  <meta name="theme-color" content="#F3F1EC" />
   <link rel="canonical" href="https://beekery.es/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Beekery · Pan que no entiende de prisas" />
-  <meta property="og:description" content="Obrador artesano en Dénia. Trigo antiguo de la Marina Alta, fermentaciones lentas y tartas por encargo." />
-  <meta property="og:image" content="https://beekery.es/assets/img/hogaza.jpg" />
+  <meta property="og:title" content="Beekery · Pan sin prisa, en Dénia" />
+  <meta property="og:description" content="Trigo antiguo de la Marina Alta, fermentaciones largas y un pan distinto cada día. Av. de Gandia, 25." />
+  <meta property="og:image" content="https://beekery.es/assets/v2/hero-hogaza.webp" />
   <meta property="og:locale" content="es_ES" />
 
   <script>document.documentElement.classList.add("js")</script>
@@ -19,9 +19,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260928" />
-  <link rel="preload" as="image" href="assets/img/hogaza.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=v2-1" />
+  <link rel="preload" as="image" href="assets/v2/hero-hogaza-m.webp" />
 
   <script type="application/ld+json">
   {
@@ -29,8 +29,9 @@
     "@type": "Bakery",
     "name": "Beekery Obrador",
     "url": "https://beekery.es/",
-    "image": "https://beekery.es/assets/img/hogaza.jpg",
+    "image": "https://beekery.es/assets/v2/hero-hogaza.webp",
     "telephone": "+34 722 34 89 41",
+    "priceRange": "1-10 €",
     "servesCuisine": "Panadería y pastelería artesana",
     "address": {
       "@type": "PostalAddress",
@@ -40,6 +41,7 @@
       "addressRegion": "Alicante",
       "addressCountry": "ES"
     },
+    "geo": { "@type": "GeoCoordinates", "latitude": 38.8414804, "longitude": 0.0982755 },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "19:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "14:00" }
@@ -51,380 +53,315 @@
 <body>
   <a class="skip" href="#main">Saltar al contenido</a>
 
-  <!-- ============ NAV ============ -->
+  <!-- ================= NAV ================= -->
   <header class="nav" data-nav>
-    <div class="nav-inner">
-      <a class="nav-logo" href="#top" aria-label="Beekery, inicio">
-        <img src="assets/img/logo-beekery.png" alt="Beekery" width="447" height="202" />
-      </a>
-      <nav class="nav-links" aria-label="Principal">
-        <a href="#obrador">El obrador</a>
-        <a href="#blat">Blat de la Marina</a>
-        <a href="#agenda">Agenda de pan</a>
-        <a href="#carta">Carta</a>
-        <a href="#visita">Visítanos</a>
-      </nav>
-      <a class="btn btn-small nav-cta" href="#encargos">Encargar</a>
-      <button class="nav-burger" type="button" aria-label="Abrir menú" aria-expanded="false" data-burger>
-        <span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-sheet" data-sheet>
-      <a href="#obrador">El obrador</a>
-      <a href="#blat">Blat de la Marina</a>
-      <a href="#agenda">Agenda de pan</a>
-      <a href="#carta">Carta</a>
-      <a href="#encargos">Encargos</a>
+    <a class="nav-logo" href="#top" aria-label="Beekery, inicio">
+      <img src="assets/img/logo-beekery.png" alt="Beekery" width="447" height="202" />
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#hoy">Hoy</a>
+      <a href="#origen">Origen</a>
+      <a href="#vitrina">Carta</a>
+      <a href="#obrador">Obrador</a>
       <a href="#visita">Visítanos</a>
-    </div>
+    </nav>
+    <p class="nav-status" data-status><i></i><span data-status-text>Mar–Vie 8–19 · Sáb–Dom 9–14</span></p>
+    <a class="btn btn-ink nav-cta" href="#encargos">Encargar <span aria-hidden="true">→</span></a>
+    <button class="nav-burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sheet" data-burger>
+      <span></span><span></span>
+    </button>
   </header>
 
+  <div class="sheet" id="sheet" data-sheet>
+    <nav aria-label="Menú móvil">
+      <a href="#hoy"><small>01</small>Hoy en el horno</a>
+      <a href="#origen"><small>02</small>Origen</a>
+      <a href="#vitrina"><small>03</small>La carta</a>
+      <a href="#obrador"><small>04</small>El obrador</a>
+      <a href="#encargos"><small>05</small>Encargos</a>
+      <a href="#visita"><small>06</small>Visítanos</a>
+    </nav>
+    <p class="sheet-foot">Av. de Gandia, 25 · Dénia<br /><a href="tel:+34722348941">722 34 89 41</a></p>
+  </div>
+
   <main id="main">
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <figure class="hero-media" data-hero-media>
+        <img src="assets/v2/hero-hogaza-m.webp" alt="Hogaza de Beekery vista desde arriba, enharinada y abierta en cuatro cortes, sobre una tabla de madera" width="900" height="935" fetchpriority="high" />
+      </figure>
+
       <div class="hero-copy">
-        <p class="status" data-status>
-          <span class="status-dot"></span>
-          <span data-status-text>Mar–Vie 8:00–19:00 · Sáb–Dom 9:00–14:00</span>
-        </p>
-        <h1 class="hero-title reveal">
-          Pan que no<br /><em>entiende</em> de prisas.
+        <p class="kicker">Obrador de pan y pastelería · Dénia</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="line"><span>Pan</span></span>
+          <span class="line"><span>sin</span></span>
+          <span class="line"><span>prisa.</span></span>
         </h1>
-        <p class="hero-sub reveal">
-          Trigo antiguo cultivado a los pies del Montgó, fermentaciones lentas y horno encendido cada mañana en la Avenida de Gandia.
-        </p>
-        <div class="hero-ctas reveal">
-          <a class="btn" href="#agenda">Qué sale hoy del horno</a>
-          <a class="btn btn-ghost" href="#encargos">Encargar una tarta</a>
+        <p class="hero-sub">Trigo antiguo de la Marina Alta, fermentaciones largas y horno encendido cada mañana en la Avenida de Gandia.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-ink" href="#hoy">Qué sale hoy <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-line" href="#encargos">Encargar una tarta</a>
         </div>
-        <ul class="hero-proof reveal" aria-label="Reconocimientos">
-          <li><strong>Panou</strong> en el Banco de Recetas de la UNESCO</li>
-          <li><strong>Mundial</strong> de Panadería, clasificados</li>
-          <li><strong>Harina propia</strong> del proyecto Blat de la Marina</li>
+      </div>
+
+      <a class="hero-today" href="#hoy" data-hero-today>
+        <span class="hero-today-label" data-hero-today-label>Hoy en el horno</span>
+        <span class="hero-today-list" data-hero-today-list>Consulta la agenda de pan</span>
+        <span class="hero-today-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- ================= HOY EN EL HORNO ================= -->
+    <section class="hoy" id="hoy" aria-labelledby="hoy-title">
+      <div class="hoy-head">
+        <p class="label"><span>01</span> Agenda de pan</p>
+        <h2 class="hoy-intro" id="hoy-title">Cada pan tiene <em>su día</em>. Algunos solo salen del horno una vez por semana.</h2>
+      </div>
+
+      <div class="hoy-stage" id="hoy-panel" role="tabpanel" aria-live="polite">
+        <p class="hoy-when" data-hoy-when>Hoy</p>
+        <p class="hoy-day" data-hoy-day>Martes</p>
+        <ul class="hoy-list" data-hoy-list>
+          <li>Multicereales</li><li>Blat de la Marina</li><li>Pan inglés integral</li>
         </ul>
       </div>
 
-      <div class="hero-visual">
-        <div class="loaf" data-loaf>
-          <img src="assets/img/hogaza.jpg" alt="Hogaza de Beekery recién horneada, con la corteza enharinada y abierta en cruz" width="900" height="900" />
-        </div>
-        <svg class="loaf-ring" viewBox="0 0 400 400" aria-hidden="true">
-          <defs><path id="ring" d="M200,200 m-178,0 a178,178 0 1,1 356,0 a178,178 0 1,1 -356,0" /></defs>
-          <text><textPath href="#ring">Horneado cada mañana · Dénia · Obrador artesano · Horneado cada mañana · Dénia · Obrador artesano ·</textPath></text>
-        </svg>
-        <a class="today-card" href="#agenda" data-today-card>
-          <span class="today-label" data-today-label>Hoy en el horno</span>
-          <span class="today-list" data-today-list>Consulta la agenda de pan</span>
-        </a>
+      <div class="hoy-week" role="tablist" aria-label="Elige un día" data-hoy-week>
+        <button role="tab" type="button" aria-controls="hoy-panel" data-d="2" aria-selected="true">Mar</button>
+        <button role="tab" type="button" aria-controls="hoy-panel" data-d="3" aria-selected="false">Mié</button>
+        <button role="tab" type="button" aria-controls="hoy-panel" data-d="4" aria-selected="false">Jue</button>
+        <button role="tab" type="button" aria-controls="hoy-panel" data-d="5" aria-selected="false">Vie</button>
+        <button role="tab" type="button" aria-controls="hoy-panel" data-d="6" aria-selected="false">Sáb</button>
+        <button role="tab" type="button" aria-controls="hoy-panel" data-d="0" aria-selected="false">Dom</button>
+        <button role="tab" type="button" aria-controls="hoy-panel" data-d="1" aria-selected="false">Lun</button>
       </div>
+
+      <div class="hoy-foot">
+        <p>El pan de cada día se acaba. Si no quieres quedarte sin el tuyo, te lo guardamos.</p>
+        <a class="btn btn-ink" href="https://wa.me/34722348941" target="_blank" rel="noopener" data-hoy-wa>Guárdame uno por WhatsApp <span aria-hidden="true">→</span></a>
+      </div>
+
+      <noscript>
+        <p class="hoy-noscript">Mar: Multicereales, Blat de la Marina, Pan inglés integral · Mié: Espelta integral, Centeno, Chapata · Jue: Multicereales, Blat de la Marina con espelta, Trigo sarraceno · Vie: Espelta, Brioche en molde, Blat de la Marina, Chapata · Sáb: Espelta integral, Multicereal, Blat de la Marina, Creación Beekery · Dom: Espelta, Blat de la Marina, Gran trenza de brioche rellena, Chapata · Lunes cerrado.</p>
+      </noscript>
     </section>
 
-    <!-- ============ MARQUEE ============ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Espelta</span><i>✺</i><span>Centeno</span><i>✺</i><span>Blat de la Marina</span><i>✺</i><span>Trigo sarraceno</span><i>✺</i><span>Triticum turgidum</span><i>✺</i><span>Multicereal</span><i>✺</i><span>Centeno con cerveza y nueces</span><i>✺</i>
-        <span>Espelta</span><i>✺</i><span>Centeno</span><i>✺</i><span>Blat de la Marina</span><i>✺</i><span>Trigo sarraceno</span><i>✺</i><span>Triticum turgidum</span><i>✺</i><span>Multicereal</span><i>✺</i><span>Centeno con cerveza y nueces</span><i>✺</i>
-      </div>
-    </div>
-
-    <!-- ============ OBRADOR ============ -->
-    <section class="section obrador" id="obrador">
-      <div class="wrap obrador-grid">
-        <div class="obrador-head">
-          <p class="eyebrow"><span>01</span> Los hermanos Van Beek</p>
-          <h2 class="h2 reveal">Un oficio aprendido<br />en las mejores <em>cocinas</em>,<br />traído de vuelta a casa.</h2>
-        </div>
-
-        <figure class="obrador-photo reveal">
-          <img src="assets/img/hermanos.jpg" alt="Panaderos de Beekery trabajando la harina en el obrador" width="407" height="477" loading="lazy" />
-          <figcaption>En el obrador de la Avenida de Gandia.</figcaption>
-        </figure>
-
-        <div class="obrador-text">
-          <p class="lede reveal">
-            <span class="dropcap">B</span>eekery nace del sueño de dos hermanos enamorados del oficio de la panadería tradicional. Tras clasificarse para un mundial de panadería y conseguir que su receta del Panou entrara en el Banco de Recetas de la UNESCO, la idea empezó a tomar forma.
-          </p>
-          <p class="reveal">
-            Mientras Raquel trabajaba en algunas de las cocinas más prestigiosas del país, el proyecto se fue perfilando: traer a Dénia una panadería que no entiende de prisas, que basa su éxito en el trabajo diario, en el compromiso con la salud de quien la come y en recuperar las mejores materias primas.
-          </p>
-          <p class="reveal">
-            En el obrador innovamos para ofrecer sabores nuevos, siempre con la misma filosofía: ingredientes naturales y de proximidad.
-          </p>
-
-          <dl class="stats reveal">
-            <div><dt data-count="15">15</dt><dd>variedades de pan</dd></div>
-            <div><dt data-count="15">15</dt><dd>tartas y semifríos</dd></div>
-            <div><dt data-count="6">6</dt><dd>días de horno a la semana</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BLAT DE LA MARINA ============ -->
-    <section class="blat" id="blat">
-      <div class="blat-hero">
-        <img class="blat-img" src="assets/img/montgo.jpg" alt="Campo de trigo verde a los pies del Montgó, en Dénia" width="1600" height="876" loading="lazy" data-parallax />
-        <div class="blat-overlay"></div>
-        <div class="wrap blat-hero-copy">
-          <p class="eyebrow eyebrow-light"><span>02</span> Blat de la Marina</p>
-          <h2 class="h2 h2-light reveal">Nuestro pan,<br /><em>nuestra harina.</em></h2>
+    <!-- ================= ORIGEN · BLAT DE LA MARINA ================= -->
+    <section class="origen" id="origen" aria-labelledby="origen-title">
+      <div class="origen-hero">
+        <picture class="origen-media">
+          <source media="(max-width: 860px)" srcset="assets/v2/montgo-m.webp" />
+          <img src="assets/v2/montgo.webp" alt="Trigo verde creciendo a los pies del Montgó, en Dénia" width="1600" height="875" loading="lazy" data-parallax />
+        </picture>
+        <div class="origen-title-wrap">
+          <p class="label label-light"><span>02</span> Blat de la Marina</p>
+          <h2 class="origen-title" id="origen-title"><span>Del Montgó</span><span>al horno.</span></h2>
         </div>
       </div>
 
-      <div class="wrap blat-body">
-        <p class="blat-intro reveal">
-          Gracias al proyecto <strong>Blat de la Marina</strong> recuperamos el cultivo y la molienda de variedades de grano antiguas, con beneficios muy interesantes para la salud. Volvemos a conectar la cadena que unía a labradores, moledores y artesanos.
-        </p>
+      <div class="origen-body">
+        <p class="origen-motto">«La importancia del trabajo diario y colectivo, desde la siembra hasta el horneado.»</p>
+        <p class="origen-lede">Con el proyecto <strong>Blat de la Marina</strong> volvemos a cultivar y moler variedades antiguas de trigo de nuestra comarca. Es recuperar la cadena que unía a labradores, moledores y panaderos, y un pan que sabe a algo.</p>
 
-        <div class="steps-line" aria-hidden="true"><span data-steps-line></span></div>
-        <ol class="steps" data-steps>
-          <li class="step reveal">
-            <span class="step-num">i</span>
-            <h3>Siembra</h3>
-            <p>Variedades antiguas de trigo vuelven a los campos de la Marina Alta.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step-num">ii</span>
-            <h3>Molienda</h3>
-            <p>El grano se muele cerca, sin viajar medio mundo para llegar al obrador.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step-num">iii</span>
-            <h3>Fermentación</h3>
-            <p>La masa descansa el tiempo que necesita. Ni una hora menos.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step-num">iv</span>
-            <h3>Horneado</h3>
-            <p>Cada mañana, en Dénia. Del campo a tu mesa con muy pocos pasos entre medias.</p>
-          </li>
+        <ol class="chain" data-chain>
+          <li><span class="chain-n">01</span><h3>Siembra</h3><p>Variedades antiguas de trigo vuelven a los campos de la Marina Alta.</p></li>
+          <li><span class="chain-n">02</span><h3>Molienda</h3><p>El grano se muele cerca, sin dar media vuelta al mundo.</p></li>
+          <li><span class="chain-n">03</span><h3>Fermentación</h3><p>La masa reposa el tiempo que necesita. Ni una hora menos.</p></li>
+          <li><span class="chain-n">04</span><h3>Horno</h3><p>Cada mañana, en Dénia, a muy pocos pasos del campo.</p></li>
         </ol>
 
-        <div class="partners reveal">
+        <div class="partners">
           <p>De la mano de</p>
           <img src="assets/img/logo-blat.png" alt="Blat de la Marina" width="598" height="483" loading="lazy" class="partner-blat" />
           <img src="assets/img/logo-riurau.png" alt="Mercat del Riurau" width="104" height="144" loading="lazy" />
           <img src="assets/img/logo-farinera.png" alt="Farinera" width="105" height="150" loading="lazy" />
-          <a class="link-arrow" href="http://www.mercatdelriurau.org/index.php/el-blat/" target="_blank" rel="noopener">Conoce el proyecto <span aria-hidden="true">→</span></a>
+          <a class="link" href="http://www.mercatdelriurau.org/index.php/el-blat/" target="_blank" rel="noopener">Conoce el proyecto <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <!-- ============ AGENDA ============ -->
-    <section class="section agenda" id="agenda">
-      <div class="wrap">
-        <div class="agenda-head">
-          <div>
-            <p class="eyebrow eyebrow-light"><span>03</span> Agenda de pan</p>
-            <h2 class="h2 h2-light reveal">Cada pan tiene<br />su <em>día</em>.</h2>
+    <!-- ================= VITRINA (CARTA) ================= -->
+    <section class="vitrina" id="vitrina" aria-labelledby="vitrina-title">
+      <div class="vitrina-head">
+        <p class="label"><span>03</span> La carta</p>
+        <h2 class="vitrina-title" id="vitrina-title">La vitrina</h2>
+        <a class="link" href="assets/carta-beekery.pdf" target="_blank" rel="noopener">Carta completa en PDF <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="vitrina-grid">
+        <!-- Escenario fijo (escritorio) -->
+        <div class="stage" aria-hidden="true" data-stage>
+          <div class="stage-inner">
+            <figure class="stage-shot is-active" data-shot="pan"><img src="assets/v2/hogazas.webp" alt="" width="1400" height="653" loading="lazy" /></figure>
+            <figure class="stage-shot" data-shot="semi"><img src="assets/v2/semifrio.webp" alt="" width="1200" height="900" loading="lazy" /></figure>
+            <figure class="stage-shot is-print" data-shot="cocas"><img src="assets/v2/coca.webp" alt="" width="760" height="520" loading="lazy" /></figure>
+            <figure class="stage-shot is-print" data-shot="bolleria"><img src="assets/v2/croissant.webp" alt="" width="1000" height="750" loading="lazy" /></figure>
+            <figure class="stage-shot is-print is-tall" data-shot="tartas"><img src="assets/v2/tiramisu.webp" alt="" width="480" height="626" loading="lazy" /></figure>
+            <div class="stage-shot is-type" data-shot="temp"><span>Reyes</span><span>Pascua</span><span>Navidad</span></div>
+            <p class="stage-caption"><span data-stage-caption>01</span><small>/06</small></p>
           </div>
-          <p class="agenda-note reveal">
-            Algunos panes solo salen del horno un día a la semana. Mira cuál toca hoy y, si no quieres quedarte sin él, pídenos que te lo guardemos.
-          </p>
         </div>
 
-        <div class="week" role="list" data-week>
-          <article class="day" role="listitem" data-day="2">
-            <header><h3>Martes</h3><span class="day-tag">Hoy</span></header>
-            <ul><li>Multicereales</li><li>Blat de la Marina</li><li>Pan inglés integral <small>de molde</small></li></ul>
+        <!-- Categorías -->
+        <div class="cats">
+          <article class="cat" data-cat="pan" style="--c: var(--azul); --on: var(--harina)">
+            <figure class="cat-shot"><img src="assets/v2/hogazas.webp" alt="Hogazas de Beekery con la corteza enharinada" width="1400" height="653" loading="lazy" /></figure>
+            <header><span class="cat-n">15</span><h3>Pan</h3></header>
+            <p class="cat-intro">Harinas que se notan y fermentaciones largas. Algunos panes solo salen ciertos días: <a href="#hoy">mira la agenda</a>.</p>
+            <ul class="items">
+              <li>Trigo blanco</li><li>Integral de trigo</li><li>Molde blanco</li><li>Molde integral</li>
+              <li>Espelta</li><li>Espelta integral</li><li>Multicereal</li><li>Centeno</li>
+              <li>Centeno con cerveza y nueces</li><li>Trigo sarraceno</li><li>Triticum turgidum</li><li>Calabaza</li>
+              <li>Vino</li><li>Tomate con olivas negras</li><li>Tomate con hierbas provenzales</li>
+            </ul>
           </article>
-          <article class="day" role="listitem" data-day="3">
-            <header><h3>Miércoles</h3><span class="day-tag">Hoy</span></header>
-            <ul><li>Espelta integral</li><li>Centeno</li><li>Chapata</li></ul>
-          </article>
-          <article class="day" role="listitem" data-day="4">
-            <header><h3>Jueves</h3><span class="day-tag">Hoy</span></header>
-            <ul><li>Multicereales</li><li>Blat de la Marina con espelta</li><li>Trigo sarraceno</li></ul>
-          </article>
-          <article class="day" role="listitem" data-day="5">
-            <header><h3>Viernes</h3><span class="day-tag">Hoy</span></header>
-            <ul><li>Espelta</li><li>Brioche en molde</li><li>Blat de la Marina</li><li>Chapata</li></ul>
-          </article>
-          <article class="day" role="listitem" data-day="6">
-            <header><h3>Sábado</h3><span class="day-tag">Hoy</span></header>
-            <ul><li>Espelta integral</li><li>Multicereal</li><li>Blat de la Marina</li><li>Creación Beekery</li></ul>
-          </article>
-          <article class="day" role="listitem" data-day="0">
-            <header><h3>Domingo</h3><span class="day-tag">Hoy</span></header>
-            <ul><li>Espelta</li><li>Blat de la Marina</li><li>Gran trenza de brioche rellena</li><li>Chapata</li></ul>
-          </article>
-        </div>
 
-        <div class="agenda-foot reveal">
-          <p>Los lunes el horno descansa.</p>
-          <a class="btn btn-light" href="https://wa.me/34722348941?text=Hola%20Beekery%2C%20%C2%BFme%20pod%C3%A9is%20guardar%20un%20pan%3F" target="_blank" rel="noopener" data-wa-reserve>Guárdame un pan por WhatsApp</a>
+          <article class="cat" data-cat="semi" style="--c: var(--amarillo); --on: var(--tinta)">
+            <figure class="cat-shot"><img src="assets/v2/semifrio.webp" alt="Semifrío amarillo de Beekery con crumble de galleta y merengue" width="1200" height="900" loading="lazy" /></figure>
+            <header><span class="cat-n">07</span><h3>Semifríos</h3></header>
+            <p class="cat-intro">Pastelería fresca de vitrina. Tres de ellos, 100% vegetales.</p>
+            <ul class="items">
+              <li>Cacao</li><li>Yogur, lotus y fruta de la pasión</li><li>3 chocos</li><li>Vainilla, plátano y tofe</li>
+              <li>Mango y pistacho <b>vegano</b></li>
+              <li>Fresas con chocolate negro bio <b>vegano</b></li>
+              <li>Coco, avellanas y chocolate con leche de almendras <b>vegano</b></li>
+            </ul>
+          </article>
+
+          <article class="cat" data-cat="cocas" style="--c: var(--teja); --on: var(--harina)">
+            <figure class="cat-shot is-print"><img src="assets/v2/coca.webp" alt="Coca de verduras al horno de Beekery" width="760" height="520" loading="lazy" /></figure>
+            <header><span class="cat-n">07</span><h3>Cocas</h3></header>
+            <p class="cat-intro">La coca de la Marina de toda la vida, con masa de obrador.</p>
+            <ul class="items">
+              <li>Espinacas y queso de cabra</li><li>Verduras al horno</li><li>Lomo adobado</li>
+              <li>Guisantes con jamón serrano y cebolla caramelizada</li><li>Atún con tomate</li><li>Anchoas</li><li>Aceite y hierbas provenzales</li>
+            </ul>
+          </article>
+
+          <article class="cat" data-cat="bolleria" style="--c: var(--mantequilla); --on: var(--tinta)">
+            <figure class="cat-shot is-print"><img src="assets/v2/croissant.webp" alt="Cruasán de mantequilla (imagen ilustrativa)" width="1000" height="750" loading="lazy" /></figure>
+            <header><span class="cat-n">18</span><h3>Bollería</h3></header>
+            <p class="cat-intro">Hojaldres, rolls y empanadillas: lo que se pide para almorzar.</p>
+            <ul class="items">
+              <li>Croissant</li><li>Croissant de almendra</li><li>Napolitana de chocolate</li><li>Napolitana de jamón y queso</li>
+              <li>Cuadrado de bacon, brie y pera</li><li>Roll de arándanos y crema</li><li>Roll de Nutella</li><li>Roll de Kinder</li>
+              <li>Roll de praliné de nuez pecán</li><li>Pepitos de chocolate</li><li>Bollos</li><li>Trenzas con azúcar y almendra</li>
+              <li>Cookies</li><li>Brownies</li>
+              <li>Empanadilla Tex-Mex de carne picada</li><li>Empanadilla de morcilla, cebolla caramelizada y mermelada de tomate</li>
+              <li>Empanadilla de atún con verduras y huevo</li><li>Empanadilla de queso crema, jamón york y tomate</li>
+            </ul>
+          </article>
+
+          <article class="cat" data-cat="tartas" style="--c: var(--cacao); --on: var(--harina)">
+            <figure class="cat-shot is-print is-tall"><img src="assets/v2/tiramisu.webp" alt="Tarta tiramisú de Beekery espolvoreada con cacao" width="480" height="626" loading="lazy" /></figure>
+            <header><span class="cat-n">13</span><h3>Tartas</h3></header>
+            <p class="cat-intro">Enteras por encargo o al corte en vitrina. <a href="#encargos">Encarga la tuya</a>.</p>
+            <ul class="items">
+              <li>Tiramisú</li><li>Selva negra</li><li>Carrot cake</li><li>Vainilla y almendra</li><li>Milhojas</li>
+              <li>Tarta de queso</li><li>Fresas, mascarpone y pistacho</li><li>Frambuesa</li><li>Avellanas y frutas del bosque</li>
+              <li>Lemon pie</li><li>Chocolate y caramelo</li><li>Todo chocolate</li><li>Oreo</li>
+            </ul>
+            <p class="items-sub">Al corte: almendra · queso · manzana</p>
+          </article>
+
+          <article class="cat" data-cat="temp" style="--c: var(--verde); --on: var(--harina)">
+            <div class="cat-shot is-type" aria-hidden="true"><span>Reyes</span><span>Pascua</span><span>Navidad</span></div>
+            <header><span class="cat-n">∞</span><h3>Temporada</h3></header>
+            <p class="cat-intro">Lo que marca el calendario. Pregunta por fechas y encargos.</p>
+            <ul class="items">
+              <li>Panou, mona y pan quemao <b>Pascua</b></li>
+              <li>Roscón <b>Reyes</b></li>
+              <li>Tronco de Navidad: abeto, calabaza, orelys y caramelo de sus pipas <b>Navidad</b></li>
+              <li>Panettone <b>Navidad</b></li>
+              <li>Panettone de calabaza <b>Novedad</b></li>
+              <li>Mazapán, cascas y pastissets <b>Navidad</b></li>
+              <li>Bombones y figuras de chocolate</li><li>Kokos</li><li>Mantecados</li>
+              <li>Pan de coca de Blat de la Marina</li><li>Coca de mermelada de higos y mascarpone</li><li>Croissant de limón y frambuesa</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ CARTA ============ -->
-    <section class="section carta" id="carta">
-      <div class="wrap">
-        <div class="carta-head">
-          <div>
-            <p class="eyebrow"><span>04</span> Nuestra carta</p>
-            <h2 class="h2 reveal">Del obrador,<br /><em>sin atajos</em>.</h2>
-          </div>
-          <a class="link-arrow" href="assets/carta-beekery.pdf" target="_blank" rel="noopener">Descargar carta en PDF <span aria-hidden="true">↓</span></a>
+    <!-- ================= OBRADOR ================= -->
+    <section class="obrador" id="obrador" aria-labelledby="obrador-title">
+      <p class="label"><span>04</span> Los hermanos Van Beek</p>
+      <h2 class="obrador-title" id="obrador-title">Un oficio aprendido en grandes cocinas, <em>traído de vuelta a casa</em>.</h2>
+
+      <div class="obrador-grid">
+        <figure class="obrador-photo">
+          <img src="assets/v2/obrador.webp" alt="Los panaderos de Beekery echando harina en un barreño, frente a los hornos del obrador" width="407" height="477" loading="lazy" />
+          <figcaption>En el obrador · Av. de Gandia</figcaption>
+        </figure>
+
+        <div class="obrador-text">
+          <p class="drop">Beekery nace del sueño de dos hermanos enamorados de la panadería tradicional. Tras clasificarse para un mundial de panadería y ver su receta de Panou entrar en el Banco de Recetas de la UNESCO, la idea empezó a tomar forma.</p>
+          <p>Mientras Raquel trabajaba en algunas de las cocinas más prestigiosas del país, el proyecto se fue perfilando: traer a Dénia una panadería que no entiende de prisas, que se apoya en el trabajo diario, en la salud de quien la come y en recuperar las mejores materias primas.</p>
         </div>
 
-        <div class="tabs" role="tablist" aria-label="Categorías de la carta" data-tabs>
-          <button role="tab" id="tab-pan" aria-controls="p-pan" aria-selected="true">Pan</button>
-          <button role="tab" id="tab-semi" aria-controls="p-semi" aria-selected="false">Semifríos</button>
-          <button role="tab" id="tab-cocas" aria-controls="p-cocas" aria-selected="false">Cocas</button>
-          <button role="tab" id="tab-bolleria" aria-controls="p-bolleria" aria-selected="false">Bollería</button>
-          <button role="tab" id="tab-tartas" aria-controls="p-tartas" aria-selected="false">Tartas</button>
-          <button role="tab" id="tab-temp" aria-controls="p-temp" aria-selected="false">Temporada</button>
-          <span class="tabs-ink" aria-hidden="true" data-tabs-ink></span>
-        </div>
+        <ul class="facts">
+          <li><strong>Panou</strong><span>Receta en el Banco de Recetas de la UNESCO</span></li>
+          <li><strong>Mundial</strong><span>Clasificados para un mundial de panadería</span></li>
+          <li><strong>Harina propia</strong><span>Del proyecto Blat de la Marina</span></li>
+        </ul>
 
-        <div class="panels">
-          <!-- PAN -->
-          <div class="panel is-active" role="tabpanel" id="p-pan" aria-labelledby="tab-pan">
-            <figure class="panel-fig panel-fig-loaves"><img src="assets/img/hogazas.jpg" alt="Hogazas artesanas de Beekery sobre fondo azul" width="1600" height="522" loading="lazy" /></figure>
-            <div class="panel-body">
-              <p class="panel-intro">Fermentaciones largas y harinas que se notan. Algunos panes salen solo ciertos días: consulta la agenda.</p>
-              <ul class="menu">
-                <li>Trigo blanco</li><li>Integral de trigo</li><li>Molde blanco</li><li>Molde integral</li>
-                <li>Espelta</li><li>Espelta integral</li><li>Multicereal</li><li>Centeno</li>
-                <li>Centeno con cerveza y nueces</li><li>Trigo sarraceno</li><li>Triticum turgidum</li><li>Calabaza</li>
-                <li>Vino</li><li>Tomate con olivas negras</li><li>Tomate con hierbas provenzales</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- SEMIFRIOS -->
-          <div class="panel" role="tabpanel" id="p-semi" aria-labelledby="tab-semi">
-            <figure class="panel-fig"><img src="assets/img/semifrio.jpg" alt="Semifrío amarillo de Beekery con crumble de galleta" width="1400" height="695" loading="lazy" /></figure>
-            <div class="panel-body">
-              <p class="panel-intro">Pastelería fresca de vitrina. Tres de ellos, 100% vegetales.</p>
-              <ul class="menu">
-                <li>Cacao</li><li>Yogur, lotus y fruta de la pasión</li><li>3 chocos</li><li>Vainilla, plátano y tofe</li>
-                <li>Mango y pistacho <span class="tag">vegano</span></li>
-                <li>Fresas con chocolate negro bio <span class="tag">vegano</span></li>
-                <li>Coco, avellanas y chocolate con leche de almendras <span class="tag">vegano</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- COCAS -->
-          <div class="panel" role="tabpanel" id="p-cocas" aria-labelledby="tab-cocas">
-            <figure class="panel-fig"><img src="assets/img/coca.jpg" alt="Coca de verduras al horno de Beekery" width="700" height="440" loading="lazy" /></figure>
-            <div class="panel-body">
-              <p class="panel-intro">La coca de siempre de la Marina, con masa de obrador.</p>
-              <ul class="menu">
-                <li>Espinacas y queso de cabra</li><li>Verduras al horno</li><li>Lomo adobado</li>
-                <li>Guisantes con jamón serrano y cebolla caramelizada</li><li>Atún con tomate</li><li>Anchoas</li><li>Aceite y hierbas provenzales</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- BOLLERIA -->
-          <div class="panel" role="tabpanel" id="p-bolleria" aria-labelledby="tab-bolleria">
-            <figure class="panel-fig panel-fig-mark"><img src="assets/img/logo-obrador.png" alt="" width="343" height="307" loading="lazy" /></figure>
-            <div class="panel-body">
-              <p class="panel-intro">Hojaldres, rolls, galletas y empanadillas para el almuerzo.</p>
-              <ul class="menu">
-                <li>Croissant</li><li>Croissant de almendra</li><li>Napolitana de chocolate</li><li>Napolitana de jamón y queso</li>
-                <li>Cuadrado de bacon, brie y pera</li><li>Roll de arándanos y crema</li><li>Roll de Nutella</li><li>Roll de Kinder</li>
-                <li>Roll de praliné de nuez pecán</li><li>Pepitos de chocolate</li><li>Bollos</li><li>Trenzas con azúcar y almendra</li>
-                <li>Cookies</li><li>Brownies</li>
-                <li>Empanadilla de carne picada Tex-Mex</li><li>Empanadilla de morcilla, cebolla caramelizada y mermelada de tomate</li>
-                <li>Empanadilla de atún con verduras y huevo</li><li>Empanadilla de queso crema, jamón york y tomate</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- TARTAS -->
-          <div class="panel" role="tabpanel" id="p-tartas" aria-labelledby="tab-tartas">
-            <figure class="panel-fig"><img src="assets/img/tiramisu.jpg" alt="Tarta tiramisú de Beekery espolvoreada con cacao" width="590" height="651" loading="lazy" /></figure>
-            <div class="panel-body">
-              <p class="panel-intro">Enteras por encargo o al corte en vitrina. <a href="#encargos">Encarga la tuya →</a></p>
-              <ul class="menu">
-                <li>Tiramisú</li><li>Selva negra</li><li>Carrot cake</li><li>Vainilla y almendra</li><li>Milhojas</li>
-                <li>Tarta de queso</li><li>Fresas, mascarpone y pistacho</li><li>Frambuesa</li><li>Avellanas y frutas del bosque</li>
-                <li>Lemon pie</li><li>Chocolate y caramelo</li><li>Todo chocolate</li><li>Oreo</li>
-              </ul>
-              <p class="menu-sub">Al corte</p>
-              <ul class="menu"><li>Almendra</li><li>Queso</li><li>Manzana</li></ul>
-            </div>
-          </div>
-
-          <!-- TEMPORADA -->
-          <div class="panel" role="tabpanel" id="p-temp" aria-labelledby="tab-temp">
-            <figure class="panel-fig panel-fig-mark"><img src="assets/img/logo-obrador.png" alt="" width="343" height="307" loading="lazy" /></figure>
-            <div class="panel-body">
-              <p class="panel-intro">Lo que marca el calendario. Pregunta por fechas y encargos.</p>
-              <ul class="menu">
-                <li>Panou, mona y pan quemao <span class="tag tag-blue">Pascua</span></li>
-                <li>Roscón <span class="tag tag-blue">Reyes</span></li>
-                <li>Tronco de Navidad: abeto, calabaza, orelys y caramelo de sus pipas <span class="tag tag-blue">Navidad</span></li>
-                <li>Panettone <span class="tag tag-blue">Navidad</span></li>
-                <li>Mazapán, cascas y pastissets <span class="tag tag-blue">Navidad</span></li>
-                <li>Bombones y figuras de chocolate</li><li>Kokos</li><li>Mantecados</li>
-                <li>Pan de coca de Blat de la Marina</li><li>Coca de mermelada de higos y mascarpone</li><li>Croissant de limón y frambuesa</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <blockquote class="review">
+          <p>«Llevo yendo a Beekery desde hace 6 años y no me canso de sus increíbles Roll de sabores, sus cocas, empanadillas y sus croissant.»</p>
+          <footer>Pablo M. · reseña en Google <span class="review-score">4,3 ★ · más de 200 reseñas</span></footer>
+        </blockquote>
       </div>
     </section>
 
-    <!-- ============ ENCARGOS ============ -->
-    <section class="section encargos" id="encargos">
-      <div class="wrap encargos-grid">
-        <div class="encargos-visual reveal">
-          <img src="assets/img/semifrio.jpg" alt="" width="1400" height="695" loading="lazy" />
-          <p class="encargos-quote"><em>El sabor que recuerdas.</em></p>
-        </div>
+    <!-- ================= ENCARGOS ================= -->
+    <section class="encargos" id="encargos" aria-labelledby="encargos-title">
+      <figure class="encargos-media">
+        <img src="assets/v2/semifrio-tall.webp" alt="" width="1100" height="1154" loading="lazy" />
+      </figure>
 
-        <div class="encargos-body">
-          <p class="eyebrow"><span>05</span> Encargos</p>
-          <h2 class="h2 reveal">Tu tarta,<br /><em>por encargo</em>.</h2>
-          <p class="encargos-intro reveal">Cuéntanos qué te apetece y para cuándo. Te contestamos por WhatsApp para confirmar el encargo.</p>
+      <div class="encargos-body">
+        <p class="label label-light"><span>05</span> Encargos</p>
+        <h2 class="encargos-title" id="encargos-title">Tu tarta, <em>por encargo</em>.</h2>
+        <p class="encargos-intro">Dinos qué te apetece y para cuándo. El mensaje se prepara solo y te confirmamos por WhatsApp.</p>
 
-          <form class="order" data-order novalidate>
-            <label class="field field-full">
-              <span>¿Qué te apetece?</span>
-              <select name="producto" required>
-                <option>Tarta de queso</option><option>Tiramisú</option><option>Selva negra</option><option>Carrot cake</option>
-                <option>Fresas, mascarpone y pistacho</option><option>Todo chocolate</option><option>Lemon pie</option>
-                <option>Semifrío (a elegir)</option><option>Pan para un evento</option><option>Otra cosa (te lo cuento)</option>
-              </select>
-            </label>
-            <label class="field">
-              <span>Para el día</span>
-              <input type="date" name="fecha" required />
-            </label>
-            <label class="field">
-              <span>Raciones</span>
-              <input type="number" name="raciones" min="2" max="60" value="8" inputmode="numeric" />
-            </label>
-            <label class="field field-full">
-              <span>Tu nombre</span>
-              <input type="text" name="nombre" autocomplete="given-name" required />
-            </label>
-            <label class="field field-full">
-              <span>Algo más <small>(opcional)</small></span>
-              <textarea name="notas" rows="3" placeholder="Alergias, un mensaje escrito, vela…"></textarea>
-            </label>
-            <button class="btn btn-wa field-full" type="submit">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
-              Enviar encargo por WhatsApp
-            </button>
-            <p class="order-hint" data-order-hint>Se abrirá WhatsApp con tu pedido listo para enviar. Te confirmamos disponibilidad por ahí.</p>
-          </form>
-        </div>
+        <form class="order" data-order novalidate>
+          <label class="field field-full">
+            <span>¿Qué te apetece?</span>
+            <select name="producto">
+              <option>Tarta de queso</option><option>Tiramisú</option><option>Selva negra</option><option>Carrot cake</option>
+              <option>Fresas, mascarpone y pistacho</option><option>Todo chocolate</option><option>Lemon pie</option>
+              <option>Semifrío (a elegir)</option><option>Pan para un evento</option><option>Otra cosa (te lo cuento)</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Para el día</span>
+            <input type="date" name="fecha" required />
+          </label>
+          <label class="field">
+            <span>Raciones</span>
+            <input type="number" name="raciones" min="2" max="60" value="8" inputmode="numeric" />
+          </label>
+          <label class="field field-full">
+            <span>Tu nombre</span>
+            <input type="text" name="nombre" autocomplete="given-name" required />
+          </label>
+          <label class="field field-full">
+            <span>Algo más <small>(opcional)</small></span>
+            <textarea name="notas" rows="2" placeholder="Alergias, un mensaje escrito, velas…"></textarea>
+          </label>
+          <button class="btn btn-harina field-full" type="submit">Preparar mensaje de WhatsApp <span aria-hidden="true">→</span></button>
+          <p class="order-hint">Se abrirá WhatsApp con tu pedido escrito. No se envía nada hasta que tú le des a enviar.</p>
+        </form>
       </div>
     </section>
 
-    <!-- ============ VISITA ============ -->
-    <section class="section visita" id="visita">
-      <div class="wrap visita-grid">
+    <!-- ================= VISITA ================= -->
+    <section class="visita" id="visita" aria-labelledby="visita-title">
+      <p class="label"><span>06</span> Visítanos</p>
+      <h2 class="visita-title" id="visita-title"><span>Av. de Gandia, 25</span><span>Dénia</span></h2>
+
+      <div class="visita-grid">
         <div class="visita-info">
-          <p class="eyebrow"><span>06</span> Visítanos</p>
-          <h2 class="h2 reveal">Av. de Gandia, 25.<br /><em>Dénia.</em></h2>
-
           <table class="hours" data-hours>
             <caption class="sr-only">Horario de apertura</caption>
             <tbody>
@@ -439,21 +376,14 @@
           </table>
 
           <div class="visita-actions">
-            <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
-            <a class="btn btn-ghost" href="tel:+34722348941">Llamar · 722 34 89 41</a>
+            <a class="btn btn-ink" href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-line" href="tel:+34722348941">Llamar · 722 34 89 41</a>
           </div>
 
-          <div class="delivery">
-            <p><strong>¿Prefieres recibirlo en casa?</strong> También estamos en Glovo.</p>
-            <div class="socials">
-              <a href="https://www.instagram.com/obradorbeekery/" target="_blank" rel="noopener">Instagram</a>
-              <a href="https://www.facebook.com/beekerydenia" target="_blank" rel="noopener">Facebook</a>
-              <a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-          </div>
+          <p class="delivery"><strong>¿Mejor en casa?</strong> También nos encuentras en Glovo.</p>
         </div>
 
-        <div class="map reveal">
+        <div class="map">
           <iframe title="Mapa: Beekery, Av. de Gandia 25, Dénia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Beekery%20Obrador%2C%20Av.%20de%20Gandia%2025%2C%2003700%20D%C3%A9nia&amp;z=16&amp;output=embed"></iframe>
         </div>
@@ -461,38 +391,27 @@
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <div class="wrap">
-      <p class="footer-mark" aria-hidden="true">Beekery</p>
-      <div class="footer-cols">
-        <p>Obrador de pan y pastelería artesana<br />Av. de Gandia, 25 · 03700 Dénia</p>
-        <p><a href="tel:+34722348941">722 34 89 41</a><br /><a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a></p>
-        <p><a href="https://www.instagram.com/obradorbeekery/" target="_blank" rel="noopener">@obradorbeekery</a><br /><a href="https://www.facebook.com/beekerydenia" target="_blank" rel="noopener">Facebook</a></p>
-      </div>
-      <p class="footer-legal">© <span data-year>2026</span> Beekery Obrador · El sabor que recuerdas</p>
+    <div class="footer-cols">
+      <p>Obrador de pan y pastelería artesana<br />Av. de Gandia, 25 · 03700 Dénia</p>
+      <p><a href="tel:+34722348941">722 34 89 41</a><br /><a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p><a href="https://www.instagram.com/obradorbeekery/" target="_blank" rel="noopener">Instagram · @obradorbeekery</a><br /><a href="https://www.facebook.com/beekerydenia" target="_blank" rel="noopener">Facebook</a></p>
     </div>
+    <p class="footer-mark" aria-hidden="true">Beekery</p>
+    <p class="footer-legal">© <span data-year>2026</span> Beekery Obrador · El sabor que recuerdas</p>
   </footer>
 
-  <!-- Barra de acciones en móvil -->
+  <!-- Acciones rápidas en móvil -->
   <nav class="dock" aria-label="Acciones rápidas">
-    <a href="tel:+34722348941">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
-      Llamar
-    </a>
-    <a href="https://wa.me/34722348941" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
-      WhatsApp
-    </a>
-    <a href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-      Cómo llegar
-    </a>
+    <a href="tel:+34722348941">Llamar</a>
+    <a href="https://wa.me/34722348941" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Beekery+Obrador+Av.+de+Gandia+25+D%C3%A9nia" target="_blank" rel="noopener">Cómo llegar</a>
   </nav>
 
-  <script defer src="lib/gsap.min.js?v=20260928"></script>
-  <script defer src="lib/ScrollTrigger.min.js?v=20260928"></script>
-  <script defer src="lib/manifest.js?v=20260928"></script>
-  <script defer src="main.js?v=20260928"></script>
+  <script defer src="lib/gsap.min.js?v=v2-1"></script>
+  <script defer src="lib/ScrollTrigger.min.js?v=v2-1"></script>
+  <script defer src="lib/manifest.js?v=v2-1"></script>
+  <script defer src="main.js?v=v2-1"></script>
 </body>
 </html>
