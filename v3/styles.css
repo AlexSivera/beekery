@@ -331,7 +331,7 @@ strong { font-weight: 700; }
   background: var(--kraft);
 }
 .espiga { position: absolute; height: auto; aspect-ratio: 500 / 720; opacity: .55; pointer-events: none; }
-.espiga-a { width: clamp(9rem, 17vw, 17rem); right: 3vw; top: 3rem; transform: rotate(-6deg); }
+.espiga-a { width: clamp(14rem, 27vw, 27rem); right: 1vw; top: 2rem; transform: rotate(-6deg); }
 .espiga-b { display: none; }
 
 .vitrina-head { position: relative; max-width: 50rem; margin-bottom: clamp(3rem, 6vw, 5rem); }
@@ -366,7 +366,7 @@ strong { font-weight: 700; }
   position: absolute; z-index: 1; left: 1.4rem; bottom: 1.25rem;
   font: 700 .66rem/1 var(--f-body); letter-spacing: .2em; text-transform: uppercase; opacity: .9;
 }
-.card-arch { border-radius: 999px 999px 0 0; }
+.card-arch { border-radius: 0; }
 
 .shelf > .card:first-child { grid-column: 1 / 5; grid-row: 1; aspect-ratio: 3 / 4.1; }
 .card-b { grid-column: 6 / 9; grid-row: 1; margin-top: 11vw; aspect-ratio: 3 / 4.4; }
@@ -491,7 +491,7 @@ strong { font-weight: 700; }
 .steps { list-style: none; margin: 2.2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
 .steps li { display: grid; gap: .6rem; align-content: start; }
 .steps img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
-.steps li:nth-child(2) img { border-radius: 999px 999px 0 0; }
+.steps img { border-radius: 0; }
 .steps span { font: 700 .66rem/1.3 var(--f-body); letter-spacing: .18em; text-transform: uppercase; }
 
 /* Cadena del trigo */
@@ -499,8 +499,8 @@ strong { font-weight: 700; }
 .chain li { padding: 1rem .5rem 0 0; font: 400 1.15rem/1.2 var(--f-display); }
 .chain span { display: block; margin-bottom: .35rem; font: italic 400 .95rem/1 var(--f-display); color: var(--oro); }
 .partners { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem 1.8rem; margin-top: 2.2rem; }
-.partners img { height: 4.2rem; width: auto; padding: .45rem .6rem; background: var(--crema); border-radius: 3px; }
-.partners .partner-blat { height: 4.2rem; }
+.partners img { height: 4.6rem; width: auto; }
+.partners .partner-blat { height: 5.4rem; }
 
 /* Hermanos */
 .facts { list-style: none; margin: 2.2rem 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
@@ -545,7 +545,7 @@ strong { font-weight: 700; }
   padding: clamp(5rem, 10vw, 9rem) var(--pad);
   background: var(--crema);
 }
-.espiga-c { width: clamp(7rem, 12vw, 13rem); right: 3vw; top: 2rem; transform: rotate(12deg); }
+.espiga-c { width: clamp(13rem, 24vw, 24rem); right: 1vw; top: 1rem; transform: rotate(8deg); }
 .visita-intro { margin: 1.6rem 0 3.5rem; color: var(--tinta-2); font-size: 1.1rem; }
 .visita-grid { position: relative; display: grid; grid-template-columns: 1.05fr 1fr .95fr; gap: 3rem; align-items: start; margin-bottom: 3.5rem; }
 .sede-n { font: 700 .7rem/1.3 var(--f-body); letter-spacing: .2em; text-transform: uppercase; color: var(--miel); }
@@ -643,7 +643,7 @@ strong { font-weight: 700; }
   .hoy-week button { font-size: .7rem; letter-spacing: .04em; min-height: 2.75rem; }
 
   /* Vitrina */
-  .espiga-a { width: 6.5rem; right: -1rem; top: 1.5rem; }
+  .espiga-a { width: 11rem; right: -2.5rem; top: 1rem; }
   .espiga-b { display: none; }
   .shelf { grid-template-columns: 1fr 1fr; column-gap: .9rem; }
   .shelf > .card { grid-column: auto; grid-row: auto; aspect-ratio: 3 / 4; margin: 0 0 .9rem; }
@@ -679,7 +679,7 @@ strong { font-weight: 700; }
 
   /* Visita */
   .visita-grid { grid-template-columns: 1fr; gap: 2.6rem; }
-  .espiga-c { width: 6rem; right: -1rem; }
+  .espiga-c { width: 10.5rem; right: -2.5rem; }
   .map { aspect-ratio: 4 / 3.4; margin: 0 -1.25rem; }
 
   .footer { grid-template-columns: 1fr; gap: 2rem; }
@@ -716,10 +716,10 @@ strong { font-weight: 700; }
 .hoy-daily { max-width: 27rem; margin: -1rem 0 2rem; padding-left: .9rem; border-left: 2px solid var(--oro); color: var(--tinta-2); font-size: .98rem; }
 .hours-short { margin-top: .4rem; }
 .sede-note a { color: var(--cafe); }
-@media (max-width: 860px) { .steps { grid-template-columns: repeat(2, 1fr); row-gap: 1.1rem; } .steps li:nth-child(3) img { border-radius: 999px 999px 0 0; } .steps span { font-size: .62rem; } }
+@media (max-width: 860px) { .steps { grid-template-columns: repeat(2, 1fr); row-gap: 1.1rem; } .steps span { font-size: .62rem; } }
 
 /* v3-3: foto de cada obrador */
-.sede-photo { margin: 0 0 1.4rem; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 999px 999px 0 0; box-shadow: 0 30px 50px -30px rgba(60,34,14,.5); }
+.sede-photo { margin: 0 0 1.4rem; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 0; box-shadow: 0 30px 50px -30px rgba(60,34,14,.5); }
 .sede-photo img { width: 100%; height: 100%; object-fit: cover; }
 .sede-new .sede-photo img { object-position: 50% 60%; }
 .sede:not(.sede-new) .sede-photo img { object-position: 50% 0%; }
@@ -742,7 +742,7 @@ strong { font-weight: 700; }
 }
 .obr-photo {
   margin: 0 0 1.6rem; aspect-ratio: 16 / 10; overflow: hidden;
-  border-radius: 999px 999px 0 0;
+  border-radius: 0;
 }
 .obr-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .obr:hover .obr-photo img { transform: scale(1.04); }
